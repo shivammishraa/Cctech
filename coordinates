@@ -1,0 +1,8 @@
+# Save this file as 'robot_coords.dat'
+Part	Shape	Position (X, Y, Z)	Dimensions
+Head	Sphere	(1.25, 1.25, 6.5)	Radius: 1.0, Segments: 20
+Body	Cuboid	(0, 0, 3)	Length: 2.5, Width: 2.5, Height: 2.5
+Left Arm	Cylinder	(-0.5, 1.25, 4)	Radius: 0.3, Height: 1.5, Segments: 20
+Right Arm	Cylinder	(2.5, 1.25, 4)	Radius: 0.3, Height: 1.5, Segments: 20
+Left Leg	Cylinder	(0.75, 1.25, 0)	Radius: 0.5, Height: 3, Segments: 20
+Right Leg	Cylinder	(1.75, 1.25, 0)	Radius: 0.5, Height: 3, Segments: 20

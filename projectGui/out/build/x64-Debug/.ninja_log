@@ -1,0 +1,24 @@
+# ninja log v6
+44	785	7659933390300543	GeometryVisualizer_autogen/timestamp	d1860938184de78a
+834	2161	7659933391459663	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Intern/Cctech_assign1-master/Project/geometry/src/line3D.cpp.obj	e6260e2523e141c6
+44	785	7659933390300543	GeometryVisualizer_autogen/mocs_compilation.cpp	d1860938184de78a
+44	785	7659933390300543	C:/Users/Shivam Mishra/Desktop/Intern/Cctech_assign1-master/Project/projectGui/out/build/x64-Debug/GeometryVisualizer_autogen/timestamp	d1860938184de78a
+44	785	7659933390300543	C:/Users/Shivam Mishra/Desktop/Intern/Cctech_assign1-master/Project/projectGui/out/build/x64-Debug/GeometryVisualizer_autogen/mocs_compilation.cpp	d1860938184de78a
+814	2212	7659933391303282	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Intern/Cctech_assign1-master/Project/geometry/src/bezier.cpp.obj	40cacc45bc1d429b
+765	1897	7659796074027853	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Intern/Cctech_assign1-master/Project/geometry/src/polygon.cpp.obj	d3d558aef3369d6e
+820	2193	7659933391459663	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Intern/Cctech_assign1-master/Project/geometry/src/cuboid.cpp.obj	47ab54d84fb37152
+826	2227	7659933391459663	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Intern/Cctech_assign1-master/Project/geometry/src/cylinder.cpp.obj	c465de811097fba6
+843	2379	7659933391615920	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Intern/Cctech_assign1-master/Project/geometry/src/objToStl.cpp.obj	72cb6a1447c4d778
+715	2037	7659796073520735	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Intern/Cctech_assign1-master/Project/application/src/main.cpp.obj	92572ad68ddbf860
+808	2352	7659933391303282	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Intern/Cctech_assign1-master/Project/geometry/src/stl_shape.cpp.obj	68b3f02d772b5250
+760	2111	7659796073966516	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Intern/Cctech_assign1-master/Project/geometry/src/plot_utils.cpp.obj	fde2b079177bb7be
+52	235	7660518910160713	GeometryVisualizer_autogen/timestamp	d1860938184de78a
+52	235	7660518910160713	GeometryVisualizer_autogen/mocs_compilation.cpp	d1860938184de78a
+52	235	7660518910160713	C:/Users/Shivam Mishra/Desktop/Intern/Cctech_assign1-master/Project/projectGui/out/build/x64-Debug/GeometryVisualizer_autogen/timestamp	d1860938184de78a
+52	235	7660518910160713	C:/Users/Shivam Mishra/Desktop/Intern/Cctech_assign1-master/Project/projectGui/out/build/x64-Debug/GeometryVisualizer_autogen/mocs_compilation.cpp	d1860938184de78a
+259	1490	7660518912230743	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Intern/Cctech_assign1-master/Project/geometry/src/plot_utils.cpp.obj	c25910c72bd5cf64
+278	1495	7660518912420741	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Intern/Cctech_assign1-master/Project/geometry/src/scene.cpp.obj	b25a82c8edbd6b9c
+291	1542	7660518912540741	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Intern/Cctech_assign1-master/Project/geometry/src/sphere.cpp.obj	a5908155d791e674
+264	1546	7660518912280742	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Intern/Cctech_assign1-master/Project/geometry/src/polygon.cpp.obj	fe70e2eedfd35689
+271	1570	7660518912340732	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Intern/Cctech_assign1-master/Project/geometry/src/polyline.cpp.obj	d54e20ede0b074de
+284	1674	7660518912480732	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Intern/Cctech_assign1-master/Project/geometry/src/shape_handlers.cpp.obj	7fa1c9e1c8d25a8e
