@@ -2,20 +2,22 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <functional>
+#include <array>
 #include <chrono>
 #include <unordered_set>
 
 using namespace std;
 
 struct VectorHash {
-    size_t operator()(const array<double, 3>& v) const {
-        hash<double> hasher;
+    std::size_t operator()(const std::array<double, 3>& v) const {
+        std::hash<double> hasher;
+        // Combine the hashes of the three elements in the array
         return ((hasher(v[0]) ^ (hasher(v[1]) << 1)) >> 1) ^ (hasher(v[2]) << 1);
     }
 };
-
 struct VectorEqual {
-    bool operator()(const array<double, 3>& a, const array<double, 3>& b) const {
+    bool operator()(const std::array<double, 3>& a, const std::array<double, 3>& b) const noexcept {
         return a[0] == b[0] && a[1] == b[1] && a[2] == b[2];
     }
 };
@@ -31,7 +33,7 @@ STLShape::STLShape(const string& filepath) {
     unordered_set<array<double, 3>, VectorHash, VectorEqual> uniqueVertices;
 
     string line;
-    array<array<double, 3>, 3> triangle;
+    vector<vector<double>> triangle(3, vector<double>(3)); // Using vector instead of array
     int vertexCount = 0, totalVerticesParsed = 0;
 
     while (getline(file, line)) {
@@ -42,10 +44,12 @@ STLShape::STLShape(const string& filepath) {
             iss >> temp >> x >> y >> z;
             totalVerticesParsed++;
 
-            array<double, 3> vertex = {x, y, z};
-            triangle[vertexCount++] = vertex;
+            triangle[vertexCount] = { x, y, z };
 
+            std::array<double, 3> vertex = { x, y, z };
             uniqueVertices.insert(vertex);
+
+            vertexCount++;
 
             if (vertexCount == 3) {
                 triangles.push_back(triangle);
@@ -61,6 +65,7 @@ STLShape::STLShape(const string& filepath) {
     cout << " Unique Vertices Stored      : " << uniqueVertices.size() << endl;
     cout << " Total Triangles Extracted   : " << triangles.size() << endl << endl;
 }
+
 
 // Save triangles to .dat file using buffered write (stringstream)
 void STLShape::saveToFile(const string& filename) const {

@@ -3,19 +3,20 @@
 
 #include <string>
 #include <vector>
-#include <array>
+
+using namespace std;
 
 class STLShape
 {
 private:
-    std::vector<std::array<std::array<double, 3>, 3>> triangles;
+    vector<vector<vector<double>>> triangles; // Using vector instead of array
 
 public:
-    STLShape(const std::string &filepath);
-    void saveToFile(const std::string &filename) const;
-    void plot(const std::string &filename) const;
+    STLShape(const std::string& filepath);
+    void saveToFile(const std::string& filename) const;
+    void plot(const std::string& filename) const;
 
-    const std::vector<std::array<std::array<double, 3>, 3>> &getTriangles() const
+    vector<vector<vector<double>>> getCuboidTriangles()
     {
         return triangles;
     }

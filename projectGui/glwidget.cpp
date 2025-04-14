@@ -2,7 +2,8 @@
 #include <QDebug>
 
 GLWidget::GLWidget(QWidget* parent)
-    : QOpenGLWidget(parent) {
+    : QOpenGLWidget(parent)
+{
     qDebug() << "GLWidget constructed";
 }
 
@@ -22,7 +23,6 @@ void GLWidget::resizeGL(int w, int h)
 
 void GLWidget::paintGL()
 {
-    qDebug() << "Painting GL...";
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
@@ -40,8 +40,20 @@ void GLWidget::paintGL()
     }
     glEnd();
 }
-void GLWidget::loadTriangles(const std::vector<std::array<std::array<double, 3>, 3>>& tris)
+
+void GLWidget::loadTriangles(const std::vector<std::vector<std::vector<double>>>& tris)
 {
-    triangles = tris;
+    triangles.clear();
+    for (const auto& tri : tris)
+    {
+        std::array<std::array<double, 3>, 3> arrTri;
+        for (int i = 0; i < 3; ++i)
+        {
+            arrTri[i][0] = tri[i][0];
+            arrTri[i][1] = tri[i][1];
+            arrTri[i][2] = tri[i][2];
+        }
+        triangles.push_back(arrTri);
+    }
     update();
 }

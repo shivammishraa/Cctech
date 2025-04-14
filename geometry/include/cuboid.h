@@ -7,13 +7,15 @@
 
 class Cuboid : public Shape {
 private:
-    std::vector<std::vector<double>> vertices; // Stores cuboid vertices
-   
+    std::vector<std::vector<double>> vertices;
 
 public:
     Cuboid(double length, double width, double height);
+    Cuboid(const std::vector<double>& origin, double length, double width, double height);
 
-    void plot(const std::string& filename) const override; // Override plot method
+    std::vector<std::vector<std::vector<double>>> getCuboidTriangles() const;
+
+    void plot(const std::string& filename) const override;
     void saveToFile(const std::string& filename) const override;
 
     void translate(double dx, double dy, double dz);

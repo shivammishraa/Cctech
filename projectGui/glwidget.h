@@ -12,7 +12,7 @@ class GLWidget : public QOpenGLWidget, protected QOpenGLFunctions
 
 public:
     explicit GLWidget(QWidget* parent = nullptr);
-    void loadTriangles(const std::vector<std::array<std::array<double, 3>, 3>>& tris);
+    void loadTriangles(const std::vector<std::vector<std::vector<double>>>& tris);
 
 protected:
     void initializeGL() override;
