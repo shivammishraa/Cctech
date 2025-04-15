@@ -9,6 +9,7 @@
 using namespace std;
 
 Cuboid::Cuboid(double length, double width, double height) {
+    
     vertices = {
         {0, 0, 0}, {length, 0, 0}, {length, width, 0}, {0, width, 0},
         {0, 0, height}, {length, 0, height}, {length, width, height}, {0, width, height}
@@ -88,4 +89,22 @@ std::vector<std::vector<std::vector<double>>> Cuboid::getCuboidTriangles() const
     }
 
     return triangles;
+}
+
+vector<pair<vector<double>, vector<double>>> Cuboid::getCuboidEdgesAsLines() const {
+    vector<pair<vector<double>, vector<double>>> lines;
+
+    const int edges[12][2] = {
+        {0, 1}, {1, 2}, {2, 3}, {3, 0}, // bottom
+        {4, 5}, {5, 6}, {6, 7}, {7, 4}, // top
+        {0, 4}, {1, 5}, {2, 6}, {3, 7}  // vertical
+    };
+
+    for (int i = 0; i < 12; ++i) {
+        vector<double> v1 = vertices[edges[i][0]];
+        vector<double> v2 = vertices[edges[i][1]];
+        lines.push_back({ v1, v2 });
+    }
+
+    return lines;
 }

@@ -21,6 +21,12 @@ public:
     void translate(double dx, double dy, double dz);
     void scale(double sx, double sy, double sz);
     void rotate(double angle, char axis);
+
+
+    vector<pair<vector<double>, vector<double>>> getCuboidEdgesAsLines() const;
+
 };
+
+
 
 #endif // CUBOID_H

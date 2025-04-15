@@ -27,6 +27,7 @@ set(SOURCES
     main.cpp                             # Qt GUI entry point
     glwidget.cpp
     mainwindow.cpp
+    shapeinputdialog.cpp
     ../geometry/src/stl_shape.cpp
     ../geometry/src/bezier.cpp
     ../geometry/src/cuboid.cpp
@@ -47,6 +48,7 @@ set(SOURCES
 set(HEADERS
     glwidget.h
     mainwindow.h
+    shapeinputdialog.h
     ../geometry/include/stl_shape.h
     ../geometry/include/bezier.h
     ../geometry/include/cuboid.h

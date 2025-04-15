@@ -1,81 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-	<class>MainWindow</class>
-	<widget class="QMainWindow" name="MainWindow">
-		<property name="windowTitle">
-			<string>STL Viewer - OpenGL &amp; Qt</string>
-		</property>
-		<widget class="QWidget" name="centralwidget">
-			<layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
-				<item>
-					<layout class="QHBoxLayout" name="topBarLayout">
-						<item>
-							<widget class="QLabel" name="shapeLabel">
-								<property name="text">
-									<string>Select Shape:</string>
-								</property>
-							</widget>
-						</item>
-						<item>
-							<widget class="QComboBox" name="Shapes">
-								<item>
-									<property name="text">
-										<string>Cuboid</string>
-									</property>
-								</item>
-								<item>
-									<property name="text">
-										<string>Polygon</string>
-									</property>
-								</item>
-								<item>
-									<property name="text">
-										<string>Cylinder</string>
-									</property>
-								</item>
-								<item>
-									<property name="text">
-										<string>Triangle</string>
-									</property>
-								</item>
-								<item>
-									<property name="text">
-										<string>Sphere</string>
-									</property>
-								</item>
-								<item>
-									<property name="text">
-										<string>Polyline</string>
-									</property>
-								</item>
-							</widget>
-						</item>
-						<item>
-							<widget class="QPushButton" name="pushButton">
-								<property name="text">
-									<string>Plot Shape</string>
-								</property>
-							</widget>
-						</item>
-						<item>
-							<spacer name="horizontalSpacer">
-								<property name="orientation">
-									<enum>Qt::Horizontal</enum>
-								</property>
-								<property name="sizeType">
-									<enum>QSizePolicy::Expanding</enum>
-								</property>
-							</spacer>
-						</item>
-					</layout>
-				</item>
-				<item>
-					<widget class="QOpenGLWidget" name="openGLWidget" native="true"/>
-				</item>
-			</layout>
-		</widget>
-		<widget class="QStatusBar" name="statusbar"/>
-	</widget>
-	<resources/>
-	<connections/>
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>362</width>
+    <height>105</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>STL Viewer - OpenGL &amp; Qt</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,1">
+    <item>
+     <layout class="QHBoxLayout" name="topBarLayout">
+      <item>
+       <widget class="QLabel" name="shapeLabel">
+        <property name="text">
+         <string>Select Shape:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="Shapes">
+        <item>
+         <property name="text">
+          <string>Cuboid</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Polygon</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Cylinder</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Triangle</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Sphere</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Polyline</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Plot Shape</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Policy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="dimensionInputsLayout"/>
+    </item>
+    <item>
+     <widget class="GLWidget&#10;" name="openGLWidget"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GLWidget
+</class>
+   <extends>QOpenGLWidget</extends>
+	  <header location="global">glwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
 </ui>
