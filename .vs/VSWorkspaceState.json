@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\geometry",
+    "\\geometry\\include",
+    "\\geometry\\src",
     "\\projectGui"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\geometry\\src\\sphere.cpp",
   "PreviewInSolutionExplorer": false
 }

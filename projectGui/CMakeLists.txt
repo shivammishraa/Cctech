@@ -19,15 +19,17 @@ find_package(OpenGL REQUIRED)
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/../geometry/include
     ${CMAKE_CURRENT_SOURCE_DIR}/../application/src
+    ${CMAKE_CURRENT_SOURCE_DIR}/projectGui      
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 # Source files
 set(SOURCES
-    main.cpp                             # Qt GUI entry point
+    main.cpp
     glwidget.cpp
     mainwindow.cpp
     shapeinputdialog.cpp
+    shapefactory.cpp               
     ../geometry/src/stl_shape.cpp
     ../geometry/src/bezier.cpp
     ../geometry/src/cuboid.cpp
@@ -44,11 +46,13 @@ set(SOURCES
     ../geometry/src/triangle.cpp
 )
 
-# Header files (optional but helpful in IDEs)
+# Header files
 set(HEADERS
     glwidget.h
     mainwindow.h
     shapeinputdialog.h
+    shape3d.h                      
+    shapefactory.h                 
     ../geometry/include/stl_shape.h
     ../geometry/include/bezier.h
     ../geometry/include/cuboid.h

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "glwidget.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -16,11 +17,11 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_plotButton_clicked();
+    void on_plotButton_clicked();  // <-- Correctly connected in cpp
 
 private:
     Ui::MainWindow* ui;
-    GLWidget* glWidget;
+    GLWidget* glWidget;  // <-- Properly casted from promoted widget
 };
 
 #endif // MAINWINDOW_H

@@ -2,24 +2,24 @@
 #define SHAPEINPUTDIALOG_H
 
 #include <QDialog>
+#include <QFormLayout>
+#include <QDoubleSpinBox>
 #include <QSpinBox>
+#include <QMap>
 
-class ShapeInputDialog : public QDialog
-{
+class ShapeInputDialog : public QDialog {
     Q_OBJECT
 
 public:
-    explicit ShapeInputDialog(QWidget* parent = nullptr);
-    ~ShapeInputDialog();
+    explicit ShapeInputDialog(const QString& shapeType, QWidget *parent = nullptr);
 
-    double getLength() const;
-    double getWidth() const;
-    double getHeight() const;
+    double getValue(const QString& field) const;
+    int getIntValue(const QString& field) const;
 
 private:
-    QSpinBox* lengthSpinBox;
-    QSpinBox* widthSpinBox;
-    QSpinBox* heightSpinBox;
+    QString currentShape;
+    QFormLayout* formLayout;
+    QMap<QString, QWidget*> inputs;
 };
 
 #endif // SHAPEINPUTDIALOG_H

@@ -3,9 +3,10 @@
 
 #include <vector>
 #include <string>
-#include "shape.h"
+#include "shape3d.h"
+#include "shape.h" // or also include shape3d.h if needed
 
-class Cylinder : public Shape {
+class Cylinder : public Shape, public Shape3D {
 private:
     double radius;
     double height;
@@ -17,7 +18,10 @@ private:
 public:
     Cylinder(double r, double h, int res);
 
-    void plot(const std::string& filename) const override; // Override plot method
+    // ? REMOVE override unless getEdges() exists in base class
+    std::vector<std::pair<std::vector<double>, std::vector<double>>> getEdges() const;
+
+    void plot(const std::string& filename) const override;
     void saveToFile(const std::string& filename) const override;
 
     void translate(double dx, double dy, double dz);

@@ -25,7 +25,7 @@ Sphere::Sphere(double r, int seg) : radius(r), segments(seg) {
                 return;
             }
 
-            vertices.push_back({x, y, z});
+            vertices.push_back({ x, y, z });
         }
     }
 
@@ -44,7 +44,7 @@ void Sphere::plot(const string& filename) const {
     plotWithGnuplot(filename, "blue", 2);
 }
 
-void Sphere::saveToFile(const string &filename) const {
+void Sphere::saveToFile(const string& filename) const {
     ofstream file(filename, ios::app);
     if (!file) {
         cerr << "Error: Cannot open file for writing.\n";
@@ -75,4 +75,30 @@ void Sphere::scale(double factor) {
 
 void Sphere::rotate(double angle, char axis) {
     rotateVertices(vertices, angle, axis);
+}
+
+std::vector<std::pair<std::vector<double>, std::vector<double>>> Sphere::getEdges() const {
+    std::vector<std::pair<std::vector<double>, std::vector<double>>> edges;
+    int numLatitudes = segments + 1;
+    int numLongitudes = segments + 1;
+
+    for (int i = 0; i < numLatitudes; ++i) {
+        for (int j = 0; j < numLongitudes; ++j) {
+            int index = i * numLongitudes + j;
+
+            // Connect to next longitude (wrap-around)
+            if (j < numLongitudes - 1) {
+                int nextLong = index + 1;
+                edges.push_back({ vertices[index], vertices[nextLong] });
+            }
+
+            // Connect to next latitude
+            if (i < numLatitudes - 1) {
+                int nextLat = index + numLongitudes;
+                edges.push_back({ vertices[index], vertices[nextLat] });
+            }
+        }
+    }
+
+    return edges;
 }

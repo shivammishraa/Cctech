@@ -4,8 +4,9 @@
 #include <vector>
 #include <string>
 #include "shape.h"
+#include "shape3d.h"  
 
-class Sphere : public Shape {
+class Sphere : public Shape, public Shape3D {
 private:
     double radius;
     int segments;
@@ -20,6 +21,8 @@ public:
     void translate(double dx, double dy, double dz);
     void scale(double factor);
     void rotate(double angle, char axis);  // Optional: if you want rotation
+    std::vector<std::pair<std::vector<double>, std::vector<double>>> getEdges() const override;
+
 };
 
 #endif // SPHERE_H

@@ -9,9 +9,9 @@
 using namespace std;
 
 Triangle::Triangle(double x1, double y1, double z1,
-                   double x2, double y2, double z2,
-                   double x3, double y3, double z3) {
-    vertices = {{x1, y1, z1}, {x2, y2, z2}, {x3, y3, z3}};
+    double x2, double y2, double z2,
+    double x3, double y3, double z3) {
+    vertices = { {x1, y1, z1}, {x2, y2, z2}, {x3, y3, z3} };
 }
 
 void Triangle::translate(double dx, double dy, double dz) {
@@ -26,7 +26,7 @@ void Triangle::rotate(double angle, char axis, double Px, double Py, double Pz) 
     rotateVertices(vertices, angle, axis, Px, Py, Pz);
 }
 
-void Triangle::saveToFile(const string &filename) const {
+void Triangle::saveToFile(const string& filename) const {
     std::ofstream file(filename, ios::app);
     if (!file) {
         cerr << "Error: Cannot open file for writing.\n";

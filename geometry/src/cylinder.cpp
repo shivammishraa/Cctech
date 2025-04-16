@@ -18,18 +18,18 @@ void Cylinder::generateVertices() {
     for (int i = 0; i < resolution; i++) {
         double x = radius * cos(i * angleStep);
         double y = radius * sin(i * angleStep);
-        vertices.push_back({x, y, 0});
+        vertices.push_back({ x, y, 0 });
     }
 
     // Top circle
     for (int i = 0; i < resolution; i++) {
         double x = radius * cos(i * angleStep);
         double y = radius * sin(i * angleStep);
-        vertices.push_back({x, y, height});
+        vertices.push_back({ x, y, height });
     }
 }
 
-void Cylinder::saveToFile(const string &filename) const {
+void Cylinder::saveToFile(const string& filename) const {
     ofstream file(filename, ios::app);
     if (!file) {
         cerr << "Error: Cannot open file for writing.\n";
@@ -59,19 +59,42 @@ void Cylinder::saveToFile(const string &filename) const {
     file.close();
 }
 
-void Cylinder::plot(const string &filename) const {
+void Cylinder::plot(const string& filename) const {
     saveToFile(filename);
-    plotWithGnuplot(filename);  
+    plotWithGnuplot(filename);
 };
 
 void Cylinder::translate(double dx, double dy, double dz) {
-    translateVertices(vertices, dx, dy, dz);  
+    translateVertices(vertices, dx, dy, dz);
 }
 
 void Cylinder::scale(double sx, double sy, double sz) {
-    scaleVertices(vertices, sx, sy, sz);  
+    scaleVertices(vertices, sx, sy, sz);
 }
 
 void Cylinder::rotate(double angle, char axis) {
-    rotateVertices(vertices, angle, axis);  
+    rotateVertices(vertices, angle, axis);
+}
+
+vector<pair<vector<double>, vector<double>>> Cylinder::getEdges() const {
+    vector<pair<vector<double>, vector<double>>> edges;
+
+    // Bottom circle edges
+    for (int i = 0; i < resolution; ++i) {
+        int next = (i + 1) % resolution;
+        edges.push_back({ vertices[i], vertices[next] });
+    }
+
+    // Top circle edges
+    for (int i = resolution; i < 2 * resolution; ++i) {
+        int next = ((i + 1 - resolution) % resolution) + resolution;
+        edges.push_back({ vertices[i], vertices[next] });
+    }
+
+    // Vertical edges
+    for (int i = 0; i < resolution; ++i) {
+        edges.push_back({ vertices[i], vertices[i + resolution] });
+    }
+
+    return edges;
 }

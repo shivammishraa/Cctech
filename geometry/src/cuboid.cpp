@@ -9,7 +9,7 @@
 using namespace std;
 
 Cuboid::Cuboid(double length, double width, double height) {
-    
+
     vertices = {
         {0, 0, 0}, {length, 0, 0}, {length, width, 0}, {0, width, 0},
         {0, 0, height}, {length, 0, height}, {length, width, height}, {0, width, height}
