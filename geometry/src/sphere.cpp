@@ -77,28 +77,28 @@ void Sphere::rotate(double angle, char axis) {
     rotateVertices(vertices, angle, axis);
 }
 
-std::vector<std::pair<std::vector<double>, std::vector<double>>> Sphere::getEdges() const {
-    std::vector<std::pair<std::vector<double>, std::vector<double>>> edges;
-    int numLatitudes = segments + 1;
-    int numLongitudes = segments + 1;
+ std::vector<std::pair<std::vector<double>, std::vector<double>>> Sphere::getEdges() const {
+     std::vector<std::pair<std::vector<double>, std::vector<double>>> edges;
+     int numLatitudes = segments + 1;
+     int numLongitudes = segments + 1;
 
-    for (int i = 0; i < numLatitudes; ++i) {
-        for (int j = 0; j < numLongitudes; ++j) {
-            int index = i * numLongitudes + j;
+     for (int i = 0; i < numLatitudes; ++i) {
+         for (int j = 0; j < numLongitudes; ++j) {
+             int index = i * numLongitudes + j;
 
-            // Connect to next longitude (wrap-around)
-            if (j < numLongitudes - 1) {
-                int nextLong = index + 1;
-                edges.push_back({ vertices[index], vertices[nextLong] });
-            }
+             // Connect to next longitude (wrap-around)
+             if (j < numLongitudes - 1) {
+                 int nextLong = index + 1;
+                 edges.push_back({ vertices[index], vertices[nextLong] });
+             }
 
-            // Connect to next latitude
-            if (i < numLatitudes - 1) {
-                int nextLat = index + numLongitudes;
-                edges.push_back({ vertices[index], vertices[nextLat] });
-            }
-        }
-    }
+             // Connect to next latitude
+             if (i < numLatitudes - 1) {
+                 int nextLat = index + numLongitudes;
+                 edges.push_back({ vertices[index], vertices[nextLat] });
+             }
+         }
+     }
 
-    return edges;
-}
+     return edges;
+ }

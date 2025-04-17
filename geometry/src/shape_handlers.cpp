@@ -231,52 +231,6 @@ void handlePolygon() {
     } while (transformChoice != 0);
 }
 
-void handleBezier() {
-    int numPoints;
-    cout << "Enter number of control points: ";
-    cin >> numPoints;
-
-    auto bezier = make_shared<Bezier>();
-    for (int i = 0; i < numPoints; i++) {
-        double x, y, z;
-        cout << "Enter control point " << i + 1 << " (x y z): ";
-        cin >> x >> y >> z;
-        bezier->addControlPoint(x, y, z);
-    }
-    bezier->plot("data/original_bezier.dat");
-
-    int transformChoice;
-    do {
-        cout << "Choose a transformation:\n";
-        cout << "1. Translate\n";
-        cout << "2. Rotate\n";
-        cout << "3. Scale\n";
-        cout << "0. Finish\n";
-        cout << "Enter your choice: ";
-        cin >> transformChoice;
-
-        if (transformChoice == 1) {
-            double dx, dy, dz;
-            cout << "Enter translation distances (dx, dy, dz): ";
-            cin >> dx >> dy >> dz;
-            bezier->translate(dx, dy, dz);
-            bezier->plot("data/transformed_bezier.dat");
-        } else if (transformChoice == 2) {
-            double angle;
-            char axis;
-            cout << "Enter rotation angle and axis (x, y, or z): ";
-            cin >> angle >> axis;
-            bezier->rotate(angle, axis);
-            bezier->plot("data/transformed_bezier.dat");
-        } else if (transformChoice == 3) {
-            double sx, sy, sz;
-            cout << "Enter scaling factors (sx, sy, sz): ";
-            cin >> sx >> sy >> sz;
-            bezier->scale(sx, sy, sz);
-            bezier->plot("data/transformed_bezier.dat");
-        }
-    } while (transformChoice != 0);
-}
 
 void handleLine3D() {
     double x1, y1, z1, x2, y2, z2;
@@ -368,6 +322,62 @@ void handlePolyline() {
     } while (transformChoice != 0);
 }
 
+void handleBezier() {
+    int numControlPoints;
+    std::cout << "Enter number of control points: ";
+    std::cin >> numControlPoints;
+
+    Bezier bezier;
+    for (int i = 0; i < numControlPoints; ++i) {
+        double x, y, z;
+        std::cout << "Enter coordinates for point " << i + 1 << " (x y z): ";
+        std::cin >> x >> y >> z;
+        bezier.addControlPoint(x, y, z);
+    }
+
+    int numInterpolationPoints;
+    std::cout << "Enter number of interpolation points: ";
+    std::cin >> numInterpolationPoints;
+
+    bezier.saveToFile("data/bezier_data.txt");
+    bezier.plot("data/bezier_data.txt", numInterpolationPoints);
+
+
+    int transformChoice;
+    do {
+        cout << "Choose a transformation:\n";
+        cout << "1. Translate\n";
+        cout << "2. Rotate\n";
+        cout << "3. Scale\n";
+        cout << "0. Finish\n";
+        cout << "Enter your choice: ";
+        cin >> transformChoice;
+
+        if (transformChoice == 1) {
+            double dx, dy, dz;
+            cout << "Enter translation distances (dx, dy, dz): ";
+            cin >> dx >> dy >> dz;
+            bezier.translate(dx, dy, dz);
+            string path = "data/transformed_bezier.dat";
+            bezier.plot(path, numInterpolationPoints);
+        } else if (transformChoice == 2) {
+            double angle;
+            char axis;
+            cout << "Enter rotation angle and axis (x, y, or z): ";
+            cin >> angle >> axis;
+            bezier.rotate(angle, axis);
+            bezier.plot("data/transformed_bezier.dat",numInterpolationPoints);
+        } else if (transformChoice == 3) {
+            double sx, sy, sz;
+            cout << "Enter scaling factors (sx, sy, sz): ";
+            cin >> sx >> sy >> sz;
+            bezier.scale(sx, sy, sz);
+            bezier.plot("data/transformed_bezier.dat",numInterpolationPoints);
+        }
+    } while (transformChoice != 0);
+}
+
+
 void handleScene() {
     Scene scene;
     int subChoice;
@@ -378,9 +388,9 @@ void handleScene() {
         cout << "3. Add Triangle\n";
         cout << "4. Add Cylinder\n";
         cout << "5. Add Polygon\n";
-        cout << "6. Add Bezier Curve\n";
+        cout << "6. Add Polyline \n";
         cout << "7. Add 3D Line\n";
-        cout << "8. Add Polyline\n";
+        cout << "8. Add Bezier Curve\n";
         cout << "0. Finish\n";
         cout << "Enter your choice: ";
         cin >> subChoice;
@@ -442,32 +452,6 @@ void handleScene() {
         } else if (subChoice == 6) {
             double x, y, z;
             int numPoints;
-            cout << "Enter coordinates (x, y, z) where you want to plot the Bezier curve: ";
-            cin >> x >> y >> z;
-            cout << "Enter number of control points: ";
-            cin >> numPoints;
-            auto bezier = make_shared<Bezier>();
-            for (int i = 0; i < numPoints; i++) {
-                double vx, vy, vz;
-                cout << "Enter control point " << i + 1 << " (x y z): ";
-                cin >> vx >> vy >> vz;
-                bezier->addControlPoint(vx, vy, vz);
-            }
-            bezier->translate(x, y, z);
-            scene.addShape(bezier);
-        } else if (subChoice == 7) {
-            double x, y, z, x1, y1, z1, x2, y2, z2;
-            cout << "Enter coordinates (x, y, z) where you want to plot the line: ";
-            cin >> x >> y >> z;
-            cout << "Enter endpoints (x1 y1 z1) and (x2 y2 z2): ";
-            cin >> x1 >> y1 >> z1 >> x2 >> y2 >> z2;
-            auto line = make_shared<Line3D>();
-            line->setPoints(x1, y1, z1, x2, y2, z2);
-            line->translate(x, y, z);
-            scene.addShape(line);
-        } else if (subChoice == 8) {
-            double x, y, z;
-            int numPoints;
             cout << "Enter coordinates (x, y, z) where you want to place the polyline: ";
             cin >> x >> y >> z;
             cout << "Enter number of points for the polyline: ";
@@ -483,6 +467,33 @@ void handleScene() {
         
             polyline->translate(x, y, z);
             scene.addShape(polyline);
+            
+        } else if (subChoice == 7) {
+            double x, y, z, x1, y1, z1, x2, y2, z2;
+            cout << "Enter coordinates (x, y, z) where you want to plot the line: ";
+            cin >> x >> y >> z;
+            cout << "Enter endpoints (x1 y1 z1) and (x2 y2 z2): ";
+            cin >> x1 >> y1 >> z1 >> x2 >> y2 >> z2;
+            auto line = make_shared<Line3D>();
+            line->setPoints(x1, y1, z1, x2, y2, z2);
+            line->translate(x, y, z);
+            scene.addShape(line);
+        } else if (subChoice == 8) {
+            double x, y, z;
+            int numPoints;
+            cout << "Enter coordinates (x, y, z) where you want to plot the Bezier curve: ";
+            cin >> x >> y >> z;
+            cout << "Enter number of control points: ";
+            cin >> numPoints;
+            auto bezier = make_shared<Bezier>();
+            for (int i = 0; i < numPoints; i++) {
+                double vx, vy, vz;
+                cout << "Enter control point " << i + 1 << " (x y z): ";
+                cin >> vx >> vy >> vz;
+                bezier->addControlPoint(vx, vy, vz);
+            }
+            bezier->translate(x, y, z);
+            // scene.addShape(bezier);
         }
         if (subChoice != 0) {
             cout << "Do you want to add more shapes? (1 for Yes, 0 for No): ";

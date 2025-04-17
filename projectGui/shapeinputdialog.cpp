@@ -2,6 +2,7 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QLabel>
+#include <QVector3D>
 
 ShapeInputDialog::ShapeInputDialog(const QString& shapeType, QWidget* parent)
     : QDialog(parent), currentShape(shapeType) {
@@ -31,16 +32,58 @@ ShapeInputDialog::ShapeInputDialog(const QString& shapeType, QWidget* parent)
         formLayout->addRow("Height:", height); inputs["height"] = height;
         formLayout->addRow("Segments:", segments); inputs["segments"] = segments;
     }
-    // Add more shapes here like Polygon, Triangle etc.
+    else if (shapeType == "Bezier") {
+        bezierCountSpinBox = new QSpinBox;
+        bezierCountSpinBox->setRange(2, 50);
+        bezierCountSpinBox->setValue(4);
+        formLayout->addRow("Control Point Count:", bezierCountSpinBox);
 
-    QDialogButtonBox* buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
+        interpolationPointsSpinBox = new QSpinBox;
+        interpolationPointsSpinBox->setRange(10, 1000);
+        interpolationPointsSpinBox->setValue(100);
+        formLayout->addRow("Interpolation Points:", interpolationPointsSpinBox);
+
+        connect(bezierCountSpinBox, QOverload<int>::of(&QSpinBox::valueChanged),
+            this, &ShapeInputDialog::updateBezierInputs);
+
+        updateBezierInputs(bezierCountSpinBox->value());
+    }
 
     QVBoxLayout* mainLayout = new QVBoxLayout;
     mainLayout->addLayout(formLayout);
+
+    QDialogButtonBox* buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &ShapeInputDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &ShapeInputDialog::reject);
     mainLayout->addWidget(buttonBox);
+
     setLayout(mainLayout);
+}
+
+// ? Properly moved outside constructor
+void ShapeInputDialog::updateBezierInputs(int count) {
+    for (int i = 0; i < bezierInputsX.size(); ++i) {
+        formLayout->removeRow(formLayout->rowCount() - 1);
+        formLayout->removeRow(formLayout->rowCount() - 1);
+        formLayout->removeRow(formLayout->rowCount() - 1);
+    }
+    bezierInputsX.clear();
+    bezierInputsY.clear();
+    bezierInputsZ.clear();
+
+    for (int i = 0; i < count; ++i) {
+        QDoubleSpinBox* x = new QDoubleSpinBox; x->setRange(-10000, 10000); x->setValue(i * 1.0);
+        QDoubleSpinBox* y = new QDoubleSpinBox; y->setRange(-10000, 10000); y->setValue(0);
+        QDoubleSpinBox* z = new QDoubleSpinBox; z->setRange(-10000, 10000); z->setValue(0);
+
+        formLayout->addRow(QString("P%1 - X:").arg(i + 1), x);
+        formLayout->addRow(QString("P%1 - Y:").arg(i + 1), y);
+        formLayout->addRow(QString("P%1 - Z:").arg(i + 1), z);
+
+        bezierInputsX.append(x);
+        bezierInputsY.append(y);
+        bezierInputsZ.append(z);
+    }
 }
 
 double ShapeInputDialog::getValue(const QString& field) const {
@@ -57,4 +100,20 @@ int ShapeInputDialog::getIntValue(const QString& field) const {
         if (spinBox) return spinBox->value();
     }
     return 0;
+}
+
+QVector<QVector3D> ShapeInputDialog::getControlPoints() const {
+    QVector<QVector3D> controlPoints;
+    int count = bezierInputsX.size();
+    for (int i = 0; i < count; ++i) {
+        float x = bezierInputsX[i]->value();
+        float y = bezierInputsY[i]->value();
+        float z = bezierInputsZ[i]->value();
+        controlPoints.append(QVector3D(x, y, z));
+    }
+    return controlPoints;
+}
+
+int ShapeInputDialog::getInterpolationPointCount() const {
+    return interpolationPointsSpinBox ? interpolationPointsSpinBox->value() : 100;
 }

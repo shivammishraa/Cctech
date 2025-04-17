@@ -24,6 +24,7 @@ MainWindow::MainWindow(QWidget* parent)
     // Populate shape combo box
    /* ui->Shapes->addItem("Cuboid");
     ui->Shapes->addItem("Sphere");*/
+    ui->Shapes->addItem("Bezier");
     // Add more shapes here like: ui->Shapes->addItem("Cylinder");
 }
 
@@ -38,6 +39,16 @@ void MainWindow::on_plotButton_clicked()
 
     if (shape) {
         vector<pair<vector<double>, vector<double>>> edges = shape->getEdges();
+
+        // Convert edges into QVector3D f ormat for OpenGL
+        std::vector<QVector3D> shapeVertices;
+        for (const auto& edge : edges) {
+            shapeVertices.push_back(QVector3D(edge.first[0], edge.first[1], edge.first[2]));
+            shapeVertices.push_back(QVector3D(edge.second[0], edge.second[1], edge.second[2]));
+        }
+
+        // Pass the vertices to GLWidget
+
         if (glWidget) {
             glWidget->setShapeVertices(edges);
             glWidget->update();

@@ -21,9 +21,9 @@ void shapeMenu() {
     cout << "3. Triangle\n";
     cout << "4. Cylinder\n";
     cout << "5. Polygon\n";
-    cout << "6. Bezier Curve\n";
+    cout << "6. Polyline\n";
     cout << "7. 3D Line\n";
-    cout << "8. Polyline\n";
+    cout << "8. Bezier Curve\n";
     cout << "9. Scene (Combination of Shapes)\n";
     cout << "Enter choice: ";
 }
@@ -58,9 +58,9 @@ int main() {
         {3, handleTriangle},
         {4, handleCylinder},
         {5, handlePolygon},
-        {6, handleBezier},
+        {6, handlePolyline},
         {7, handleLine3D},
-        {8, handlePolyline},
+        {8, handleBezier},
         {9, handleScene}
     };
 

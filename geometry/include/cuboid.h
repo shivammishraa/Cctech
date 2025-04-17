@@ -4,9 +4,9 @@
 #include <vector>
 #include <string>
 #include "shape.h"
-#include "shape3d.h"  // NEW include
+ #include "shape3d.h"  // NEW include
 
-class Cuboid : public Shape, public Shape3D {
+class Cuboid : public Shape, public Shape3D{
 private:
     std::vector<std::vector<double>> vertices;
 
@@ -26,9 +26,9 @@ public:
     std::vector<std::pair<std::vector<double>, std::vector<double>>> getCuboidEdgesAsLines() const;
 
     // Implementation of Shape3D interface
-    std::vector<std::pair<std::vector<double>, std::vector<double>>> getEdges() const override {
-        return getCuboidEdgesAsLines();
-    }
+     std::vector<std::pair<std::vector<double>, std::vector<double>>> getEdges() const override {
+         return getCuboidEdgesAsLines();
+     }
 };
 
 #endif // CUBOID_H

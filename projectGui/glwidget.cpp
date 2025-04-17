@@ -53,16 +53,18 @@ void GLWidget::paintGL()
     glLoadMatrixf(modelview.constData());
 
     glColor3f(1.0f, 1.0f, 0.0f);
-    glBegin(GL_LINES);
+    // Try using LINE_STRIP for continuous curves like Bezier
+    glBegin(GL_LINE_STRIP);
     for (const auto& edge : shapeEdges)
     {
-        const QVector3D& start = edge.first;
-        const QVector3D& end = edge.second;
-
-        glVertex3f(start.x(), start.y(), start.z());
-        glVertex3f(end.x(), end.y(), end.z());
+        glVertex3f(edge.first.x(), edge.first.y(), edge.first.z());
+    }
+    // Add the very last point from the last edge
+    if (!shapeEdges.empty()) {
+        glVertex3f(shapeEdges.back().second.x(), shapeEdges.back().second.y(), shapeEdges.back().second.z());
     }
     glEnd();
+
 }
 
 void GLWidget::setShapeVertices(const std::vector<std::pair<std::vector<double>, std::vector<double>>>& edges)
@@ -78,19 +80,21 @@ void GLWidget::setShapeVertices(const std::vector<std::pair<std::vector<double>,
             QVector3D start(edge.first[0], edge.first[1], edge.first[2]);
             QVector3D end(edge.second[0], edge.second[1], edge.second[2]);
 
+            // Add to list of edges to draw
             shapeEdges.emplace_back(start, end);
+
+            // For computing center
             total += start + end;
             count += 2;
         }
     }
 
-    if (count > 0)
-        shapeCenter = total / float(count);
-    else
-        shapeCenter = QVector3D(0.0f, 0.0f, 0.0f);
+    // Compute shape center for rotation
+    shapeCenter = (count > 0) ? (total / count) : QVector3D(0, 0, 0);
 
-    update();
+    update(); // trigger paintGL
 }
+
 void GLWidget::checkOpenGLError()
 {
     GLenum err = glGetError();
