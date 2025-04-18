@@ -1,11 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\geometry",
     "\\geometry\\include",
-    "\\geometry\\src",
-    "\\projectGui"
+    "\\geometry\\src"
   ],
-  "SelectedNode": "\\projectGui\\glwidget.cpp",
+  "SelectedNode": "\\Makefile",
   "PreviewInSolutionExplorer": false
 }

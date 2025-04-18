@@ -30,6 +30,9 @@ public:
     void setInterpolationCount(int count);
     void generateCurve();
     std::vector<std::vector<double>> calculateBezierCurve(int numSegments = 100) const;
+    std::vector<std::vector<double>> calculateBezierCurve() const;
+
+    std::vector<double> deCasteljau(const std::vector<std::vector<double>>& points, double t)const;
 
     std::vector<std::pair<std::vector<double>, std::vector<double>>> getEdges() const;
 

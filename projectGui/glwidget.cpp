@@ -53,18 +53,16 @@ void GLWidget::paintGL()
     glLoadMatrixf(modelview.constData());
 
     glColor3f(1.0f, 1.0f, 0.0f);
-    // Try using LINE_STRIP for continuous curves like Bezier
-    glBegin(GL_LINE_STRIP);
+    glBegin(GL_LINES);
     for (const auto& edge : shapeEdges)
     {
-        glVertex3f(edge.first.x(), edge.first.y(), edge.first.z());
-    }
-    // Add the very last point from the last edge
-    if (!shapeEdges.empty()) {
-        glVertex3f(shapeEdges.back().second.x(), shapeEdges.back().second.y(), shapeEdges.back().second.z());
+        const QVector3D& start = edge.first;
+        const QVector3D& end = edge.second;
+
+        glVertex3f(start.x(), start.y(), start.z());
+        glVertex3f(end.x(), end.y(), end.z());
     }
     glEnd();
-
 }
 
 void GLWidget::setShapeVertices(const std::vector<std::pair<std::vector<double>, std::vector<double>>>& edges)
@@ -80,19 +78,18 @@ void GLWidget::setShapeVertices(const std::vector<std::pair<std::vector<double>,
             QVector3D start(edge.first[0], edge.first[1], edge.first[2]);
             QVector3D end(edge.second[0], edge.second[1], edge.second[2]);
 
-            // Add to list of edges to draw
             shapeEdges.emplace_back(start, end);
-
-            // For computing center
             total += start + end;
             count += 2;
         }
     }
 
-    // Compute shape center for rotation
-    shapeCenter = (count > 0) ? (total / count) : QVector3D(0, 0, 0);
+    if (count > 0)
+        shapeCenter = total / float(count);
+    else
+        shapeCenter = QVector3D(0.0f, 0.0f, 0.0f);
 
-    update(); // trigger paintGL
+    update();
 }
 
 void GLWidget::checkOpenGLError()
@@ -118,7 +115,28 @@ void GLWidget::wheelEvent(QWheelEvent* event)
 // === Mouse Pan ===
 void GLWidget::mousePressEvent(QMouseEvent* event)
 {
+    QVector<QPointF> points;
+
+	points.push_back(event->pos());
+	if (event->button() == Qt::LeftButton) {
+		// Handle left button press
+		qDebug() << "Left button pressed at:" << points;
+	}
+	else if (event->button() == Qt::RightButton) {
+		// Handle right button press
+		qDebug() << "Right button pressed at:" << points;
+	}
+	else if (event->button() == Qt::MiddleButton) {
+		// Handle middle button press
+		qDebug() << "Middle button pressed at:" << points;
+	}
+	// Print all points in the list
+	for (auto x : points)
+	{
+		qDebug() << "Mouse Pressed at:" << x;
+	}
     lastMousePos = event->pos();
+
 }
 
 void GLWidget::mouseMoveEvent(QMouseEvent* event)
