@@ -1,6 +1,7 @@
 #include "shapefactory.h"
 #include "cuboid.h"
 #include "sphere.h"
+#include "polygon.h"
 #include "bezier.h"
 #include "cylinder.h"
 #include "shapeinputdialog.h"
@@ -59,5 +60,33 @@ std::shared_ptr<Shape3D> createShapeFromDialog(const QString& shapeName, QWidget
         }
     }
 
+    else if (shapeName == "Polygon") {
+        ShapeInputDialog dialog(shapeName, parent);
+        dialog.setWindowTitle("Polygon Input");
+
+        if (dialog.exec() == QDialog::Accepted) {
+            int sides = dialog.getIntValue("sides");
+
+            if (sides >= 3) {
+                std::vector<std::vector<double>> vertices;
+
+                for (int i = 0; i < sides; ++i) {
+                    QString label = QString("P%1 - ").arg(i + 1);
+                    double x = dialog.getValue(label + "X:");
+                    double y = dialog.getValue(label + "Y:");
+                    double z = dialog.getValue(label + "Z:");
+                    vertices.push_back({ x, y, z });
+                }
+
+                std::shared_ptr<Shape3D> polygon = std::make_shared<Polygon>(vertices);
+                return polygon;
+                qDebug() << "Created Polygon with"  << vertices.size() << " vertices.";
+
+            }
+            else {
+                QMessageBox::warning(parent, "Invalid Input", "A polygon must have at least 3 vertices.");
+            }
+        }
+    }
     return nullptr; 
 }

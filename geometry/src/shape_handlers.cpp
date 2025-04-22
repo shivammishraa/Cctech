@@ -189,13 +189,15 @@ void handlePolygon() {
     cout << "Enter number of sides: ";
     cin >> sides;
 
-    auto polygon = make_shared<Polygon>(sides);
+    vector<vector<double>> vertices;
     for (int i = 0; i < sides; i++) {
         double x, y, z;
         cout << "Enter vertex " << i + 1 << " (x y z): ";
         cin >> x >> y >> z;
-        polygon->addVertex(x, y, z);
+        vertices.push_back({x, y, z});
     }
+
+    auto polygon = make_shared<Polygon>(vertices);  
     polygon->plot("data/original_polygon.dat");
 
     int transformChoice;
@@ -440,7 +442,7 @@ void handleScene() {
             cin >> x >> y >> z;
             cout << "Enter number of sides: ";
             cin >> sides;
-            auto polygon = make_shared<Polygon>(sides);
+            auto polygon = make_shared<Polygon>();
             for (int i = 0; i < sides; i++) {
                 double vx, vy, vz;
                 cout << "Enter vertex " << i + 1 << " (x y z): ";

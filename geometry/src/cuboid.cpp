@@ -71,25 +71,25 @@ void Cuboid::plot(const string& filename) const {
     plotWithGnuplot(filename, "blue", 2);
 }
 
-std::vector<std::vector<std::vector<double>>> Cuboid::getCuboidTriangles() const {
-    std::vector<std::vector<std::vector<double>>> triangles;
+//std::vector<std::vector<std::vector<double>>> Cuboid::getCuboidTriangles() const {
+//    std::vector<std::vector<std::vector<double>>> triangles;
+//
+//    const int faces[6][4] = {
+//        {0, 1, 2, 3}, // bottom
+//        {4, 5, 6, 7}, // top
+//        {0, 1, 5, 4}, // front
+//        {2, 3, 7, 6}, // back
+//        {1, 2, 6, 5}, // right
+//        {3, 0, 4, 7}  // left
+//    };
 
-    const int faces[6][4] = {
-        {0, 1, 2, 3}, // bottom
-        {4, 5, 6, 7}, // top
-        {0, 1, 5, 4}, // front
-        {2, 3, 7, 6}, // back
-        {1, 2, 6, 5}, // right
-        {3, 0, 4, 7}  // left
-    };
-
-    for (const auto& face : faces) {
-        triangles.push_back({ vertices[face[0]], vertices[face[1]], vertices[face[2]] });
-        triangles.push_back({ vertices[face[2]], vertices[face[3]], vertices[face[0]] });
-    }
-
-    return triangles;
-}
+//    for (const auto& face : faces) {
+//        triangles.push_back({ vertices[face[0]], vertices[face[1]], vertices[face[2]] });
+//        triangles.push_back({ vertices[face[2]], vertices[face[3]], vertices[face[0]] });
+//    }
+//
+//    return triangles;
+//}
 
 vector<pair<vector<double>, vector<double>>> Cuboid::getCuboidEdgesAsLines() const {
     vector<pair<vector<double>, vector<double>>> lines;

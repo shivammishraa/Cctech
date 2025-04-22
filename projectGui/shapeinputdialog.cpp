@@ -48,6 +48,21 @@ ShapeInputDialog::ShapeInputDialog(const QString& shapeType, QWidget* parent)
 
         updateBezierInputs(bezierCountSpinBox->value());
     }
+    else if (shapeType == "Polygon") {
+        QSpinBox* sidesSpinBox = new QSpinBox;
+        sidesSpinBox->setRange(3, 50);  // At least 3 sides
+        sidesSpinBox->setValue(3);      // Default
+
+        formLayout->addRow("Number of Sides:", sidesSpinBox);
+        inputs["sides"] = sidesSpinBox;
+
+        polygonSidesSpinBox = sidesSpinBox;
+
+        connect(sidesSpinBox, QOverload<int>::of(&QSpinBox::valueChanged),
+            this, &ShapeInputDialog::updatePolygonInputs);
+
+        updatePolygonInputs(sidesSpinBox->value());  // Initial call
+    }
 
     QVBoxLayout* mainLayout = new QVBoxLayout;
     mainLayout->addLayout(formLayout);
@@ -85,6 +100,54 @@ void ShapeInputDialog::updateBezierInputs(int count) {
         bezierInputsZ.append(z);
     }
 }
+
+void ShapeInputDialog::updatePolygonInputs(int count) {
+    // Clear old widgets from layout
+    while (formLayout->rowCount() > 1) {  // Keep first row (Number of Sides)
+        QLayoutItem* item = formLayout->takeAt(formLayout->rowCount() - 1);
+        if (item) {
+            QWidget* widget = item->widget();
+            if (widget) widget->deleteLater();
+            delete item;
+        }
+    }
+
+    // Also clear from inputs map
+    QStringList keysToRemove;
+    for (const QString& key : inputs.keys()) {
+        if (key.startsWith("P")) {
+            keysToRemove << key;
+        }
+    }
+    for (const QString& key : keysToRemove) {
+        inputs.remove(key);
+    }
+
+    polygonInputsX.clear();
+    polygonInputsY.clear();
+    polygonInputsZ.clear();
+
+    for (int i = 0; i < count; ++i) {
+        QDoubleSpinBox* x = new QDoubleSpinBox; x->setRange(-10000, 10000); x->setValue(i);
+        QDoubleSpinBox* y = new QDoubleSpinBox; y->setRange(-10000, 10000); y->setValue(0);
+        QDoubleSpinBox* z = new QDoubleSpinBox; z->setRange(-10000, 10000); z->setValue(0);
+
+        QString labelPrefix = QString("P%1 - ").arg(i + 1);
+        QString xKey = labelPrefix + "X:";
+        QString yKey = labelPrefix + "Y:";
+        QString zKey = labelPrefix + "Z:";
+
+        formLayout->addRow(xKey, x); inputs[xKey] = x;
+        formLayout->addRow(yKey, y); inputs[yKey] = y;
+        formLayout->addRow(zKey, z); inputs[zKey] = z;
+
+        polygonInputsX.append(x);
+        polygonInputsY.append(y);
+        polygonInputsZ.append(z);
+    }
+}
+
+
 
 double ShapeInputDialog::getValue(const QString& field) const {
     if (inputs.contains(field)) {

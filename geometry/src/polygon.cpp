@@ -7,15 +7,18 @@
 
 using namespace std;
 
-Polygon::Polygon(int sides) {
-    vertices.reserve(sides);
+Polygon::Polygon(const std::vector<std::vector<double>>& vertices) {
+    this->vertices = vertices;
 }
+
+Polygon::Polygon() {}
+
 
 void Polygon::addVertex(double x, double y, double z) {
     vertices.push_back({x, y, z});
 }
 
-void Polygon::calculateCentroid(double &cx, double &cy, double &cz) {
+void Polygon::calculateCentroid(double &cx, double &cy, double &cz) { 
     cx = cy = cz = 0;
     for (const auto &v : vertices) {
         cx += v[0];
@@ -65,5 +68,22 @@ void Polygon::rotate(double angle, char axis, double cx, double cy, double cz) {
     }
     rotateVertices(vertices, angle, axis, cx, cy, cz);
 }
+
+std::vector<std::pair<std::vector<double>, std::vector<double>>> Polygon::getEdges() const {
+    std::vector<std::pair<std::vector<double>, std::vector<double>>> edges;
+    size_t n = vertices.size();
+
+    if (n < 2) return edges; // Need at least 2 vertices for an edge
+
+    for (size_t i = 0; i < n; ++i) {
+        size_t next = (i + 1) % n; // wrap around to close polygon
+        edges.push_back({ vertices[i], vertices[next] });
+    }
+    std::cout << "Polygon::getEdges called. Total vertices: " << vertices.size() << std::endl;
+
+
+    return edges;
+}
+
 
 

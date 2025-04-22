@@ -1,0 +1,5 @@
+C:/Users/Shivam Mishra/Desktop/Project/build/CMakeFiles/GeometryVisualizer.dir
+C:/Users/Shivam Mishra/Desktop/Project/build/CMakeFiles/edit_cache.dir
+C:/Users/Shivam Mishra/Desktop/Project/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Shivam Mishra/Desktop/Project/build/CMakeFiles/GeometryVisualizer_autogen_timestamp_deps.dir
+C:/Users/Shivam Mishra/Desktop/Project/build/CMakeFiles/GeometryVisualizer_autogen.dir

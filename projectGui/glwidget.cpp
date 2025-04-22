@@ -1,6 +1,7 @@
 #include "glwidget.h"
 #include <QMatrix4x4>
 #include <QDebug>
+#include <QOpenGLTexture>
 #include <QWheelEvent>
 #include <QMouseEvent>
 
@@ -16,6 +17,26 @@ void GLWidget::initializeGL()
     qDebug() << "Initializing OpenGL...";
     initializeOpenGLFunctions();
     glEnable(GL_DEPTH_TEST);
+	glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
+    GLfloat lightAmbient[] = { 0.0f, 0.2f, 0.2f, 1.0f };
+    GLfloat lightDiffuse[] = { 0.8f, 0.5f, 0.8f, 1.0f };
+    GLfloat lightSpecular[] = { 0.0f, 1.0f, 1.0f, 1.0f };
+    GLfloat lightPosition[] = { 0.0f, 0.2f, 1.0f, 1.0f };
+
+    glLightfv(GL_LIGHT0, GL_AMBIENT, lightAmbient);
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, lightDiffuse);
+    glLightfv(GL_LIGHT0, GL_SPECULAR, lightSpecular);
+    glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
+
+    GLfloat matSpecular[] = { 1.0f, 1.0f, 1.0f, 1.0f };
+    GLfloat matShininess[] = { 50.0f };
+    // glMaterialfv(GL_FRONT, GL_AMBIENT, lightAmbient);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, lightDiffuse);
+    // glMaterialfv(GL_FRONT, GL_SPECULAR, matSpecular);
+    glMaterialfv(GL_FRONT, GL_SHININESS, matShininess);
+
+    glEnable(GL_NORMALIZE);;
     glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
     initialized = true;
 }
@@ -42,7 +63,7 @@ void GLWidget::paintGL()
     modelview.setToIdentity();
 
     // Apply zoom (Z-axis translation) and pan (X, Y translation)
-    modelview.translate(sceneX, sceneY, -5.0f * zoomFactor);
+    modelview.translate(sceneX, sceneY, -20.0f * zoomFactor);  // further back
     modelview.translate(shapeCenter);
     modelview.rotate(rotationX, 1.0f, 0.0f, 0.0f); // X-axis
     modelview.rotate(rotationY, 0.0f, 1.0f, 0.0f); // Y-axis
@@ -62,6 +83,11 @@ void GLWidget::paintGL()
         glVertex3f(start.x(), start.y(), start.z());
         glVertex3f(end.x(), end.y(), end.z());
     }
+    qDebug() << "Rendering edges count:" << shapeEdges.size();
+for (const auto& edge : shapeEdges) {
+    qDebug() << "Edge from" << edge.first << "to" << edge.second;
+}
+
     glEnd();
 }
 
@@ -88,6 +114,7 @@ void GLWidget::setShapeVertices(const std::vector<std::pair<std::vector<double>,
         shapeCenter = total / float(count);
     else
         shapeCenter = QVector3D(0.0f, 0.0f, 0.0f);
+    qDebug() << "GLWidget::setShapeVertices - Edges received:" << edges.size();
 
     update();
 }

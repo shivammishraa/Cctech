@@ -23,6 +23,7 @@ public:
 
 private slots:
     void updateBezierInputs(int count);
+    void updatePolygonInputs(int count);
 
 private:
     QString currentShape;
@@ -35,6 +36,12 @@ private:
     QVector<QDoubleSpinBox*> bezierInputsZ;
     QSpinBox* bezierCountSpinBox = nullptr;
     QSpinBox* interpolationPointsSpinBox = nullptr;
+	// For Polygon
+    QSpinBox* polygonSidesSpinBox;
+	QVector<QDoubleSpinBox*> polygonInputsX;
+	QVector<QDoubleSpinBox*> polygonInputsY;
+	QVector<QDoubleSpinBox*> polygonInputsZ;
+
 
 };
 
