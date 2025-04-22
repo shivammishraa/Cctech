@@ -4,10 +4,12 @@
 #include <vector>
 #include <string>
 #include "shape.h"
+#include "shape3d.h"
+
 
 using namespace std;
 
-class Polyline : public Shape {
+class Polyline : public Shape, public Shape3D {
 private:
     vector<vector<double>> points;
 
@@ -26,6 +28,8 @@ public:
 
     // Implement abstract base class methods
     void plot(const string& filename) const override;
+    vector<pair<vector<double>, vector<double>>> getEdges() const;
+
 };
 
 #endif

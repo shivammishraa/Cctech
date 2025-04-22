@@ -20,10 +20,14 @@ public:
     // For Bezier
     QVector<QVector3D> getControlPoints() const;
     int getInterpolationPointCount() const;
+	// For Polyline
+    QVector<QVector3D> getPolylinePoints() const;
+
 
 private slots:
     void updateBezierInputs(int count);
     void updatePolygonInputs(int count);
+	void updatePolylineInputs(int count);
 
 private:
     QString currentShape;
@@ -41,6 +45,14 @@ private:
 	QVector<QDoubleSpinBox*> polygonInputsX;
 	QVector<QDoubleSpinBox*> polygonInputsY;
 	QVector<QDoubleSpinBox*> polygonInputsZ;
+	// For Polyline
+	QVector<QDoubleSpinBox*> polylineInputsX;
+	QVector<QDoubleSpinBox*> polylineInputsY;
+	QVector<QDoubleSpinBox*> polylineInputsZ;
+
+
+	QSpinBox* polylineCountSpinBox = nullptr;
+	QSpinBox* polygonCountSpinBox = nullptr;
 
 
 };

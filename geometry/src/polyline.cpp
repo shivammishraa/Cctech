@@ -1,6 +1,7 @@
 #include "polyline.h"
 #include "transform_utils.h"
 #include <iostream>
+#include <qdebug.h>
 #include <fstream>
 #include <cmath>
 
@@ -75,3 +76,21 @@ void Polyline::plotPolyline(const string& filename) const {
 void Polyline::plot(const string& filename) const {
     plotPolyline(filename);
 }
+
+vector<pair<vector<double>, vector<double>>> Polyline::getEdges() const {
+    vector<pair<vector<double>, vector<double>>> edges;
+    if (points.size() < 2) return edges;
+
+    for (size_t i = 0; i < points.size() - 1; ++i) {
+        edges.push_back({ points[i], points[i + 1] });
+    }
+
+    qDebug() << "Polyline::getEdges() called - Edge count:" << edges.size();
+    for (const auto& edge : edges) {
+        qDebug() << "Edge from (" << edge.first[0] << edge.first[1] << edge.first[2] << ")"
+            << "to (" << edge.second[0] << edge.second[1] << edge.second[2] << ")";
+    }
+
+    return edges;
+}
+

@@ -2,6 +2,7 @@
 #include "cuboid.h"
 #include "sphere.h"
 #include "polygon.h"
+#include "polyline.h"
 #include "bezier.h"
 #include "cylinder.h"
 #include "shapeinputdialog.h"
@@ -80,7 +81,6 @@ std::shared_ptr<Shape3D> createShapeFromDialog(const QString& shapeName, QWidget
 
                 std::shared_ptr<Shape3D> polygon = std::make_shared<Polygon>(vertices);
                 return polygon;
-                qDebug() << "Created Polygon with"  << vertices.size() << " vertices.";
 
             }
             else {
@@ -88,5 +88,35 @@ std::shared_ptr<Shape3D> createShapeFromDialog(const QString& shapeName, QWidget
             }
         }
     }
+    else if (shapeName == "Polyline") {
+        ShapeInputDialog dialog(shapeName, parent);
+        dialog.setWindowTitle("Polyline Input");
+
+        if (dialog.exec() == QDialog::Accepted) {
+            int count = dialog.getIntValue("points");
+            if (count >= 2) {
+                std::vector<std::vector<double>> vertices;
+                for (int i = 0; i < count; ++i) {
+                    QString label = QString("P%1 - ").arg(i + 1);
+                    double x = dialog.getValue(label + "X:");
+                    double y = dialog.getValue(label + "Y:");
+                    double z = dialog.getValue(label + "Z:");
+                    vertices.push_back({ x, y, z });
+                }
+
+                auto polyline = std::make_shared<Polyline>();
+                for (const auto& p : dialog.getPolylinePoints()) {
+                    polyline->addPoint(p.x(), p.y(), p.z());
+                }
+
+                return polyline;
+                qDebug() << "Creating Polyline with" << vertices.size() << "points.";
+            }
+            else {
+                QMessageBox::warning(parent, "Invalid Input", "A polyline requires at least 2 points.");
+            }
+        }
+    }
+
     return nullptr; 
 }

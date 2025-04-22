@@ -42,7 +42,8 @@ template <> constexpr inline auto ShapeInputDialog::qt_create_metaobjectdata<qt_
         "updateBezierInputs",
         "",
         "count",
-        "updatePolygonInputs"
+        "updatePolygonInputs",
+        "updatePolylineInputs"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -52,6 +53,10 @@ template <> constexpr inline auto ShapeInputDialog::qt_create_metaobjectdata<qt_
         }}),
         // Slot 'updatePolygonInputs'
         QtMocHelpers::SlotData<void(int)>(4, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 3 },
+        }}),
+        // Slot 'updatePolylineInputs'
+        QtMocHelpers::SlotData<void(int)>(5, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { QMetaType::Int, 3 },
         }}),
     };
@@ -79,6 +84,7 @@ void ShapeInputDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         switch (_id) {
         case 0: _t->updateBezierInputs((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 1: _t->updatePolygonInputs((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 2: _t->updatePolylineInputs((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -103,14 +109,14 @@ int ShapeInputDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 3)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }

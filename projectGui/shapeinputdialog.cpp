@@ -4,6 +4,8 @@
 #include <QLabel>
 #include <QVector3D>
 
+#include <QDebug>
+
 ShapeInputDialog::ShapeInputDialog(const QString& shapeType, QWidget* parent)
     : QDialog(parent), currentShape(shapeType) {
 
@@ -63,6 +65,19 @@ ShapeInputDialog::ShapeInputDialog(const QString& shapeType, QWidget* parent)
 
         updatePolygonInputs(sidesSpinBox->value());  // Initial call
     }
+    else if (shapeType == "Polyline") {
+        QSpinBox* pointsSpinBox = new QSpinBox;
+        pointsSpinBox->setRange(2, 100);  // At least 2 points
+        pointsSpinBox->setValue(2);
+        formLayout->addRow("Number of Points:", pointsSpinBox);
+        inputs["points"] = pointsSpinBox;
+
+        connect(pointsSpinBox, QOverload<int>::of(&QSpinBox::valueChanged),
+            this, &ShapeInputDialog::updatePolylineInputs);
+
+        updatePolylineInputs(pointsSpinBox->value());
+    }
+
 
     QVBoxLayout* mainLayout = new QVBoxLayout;
     mainLayout->addLayout(formLayout);
@@ -102,26 +117,13 @@ void ShapeInputDialog::updateBezierInputs(int count) {
 }
 
 void ShapeInputDialog::updatePolygonInputs(int count) {
-    // Clear old widgets from layout
-    while (formLayout->rowCount() > 1) {  // Keep first row (Number of Sides)
-        QLayoutItem* item = formLayout->takeAt(formLayout->rowCount() - 1);
-        if (item) {
-            QWidget* widget = item->widget();
-            if (widget) widget->deleteLater();
-            delete item;
-        }
+
+    for (int i = 0; i < polygonInputsX.size(); ++i) {
+        formLayout->removeRow(formLayout->rowCount() - 1);
+        formLayout->removeRow(formLayout->rowCount() - 1);
+        formLayout->removeRow(formLayout->rowCount() - 1);
     }
 
-    // Also clear from inputs map
-    QStringList keysToRemove;
-    for (const QString& key : inputs.keys()) {
-        if (key.startsWith("P")) {
-            keysToRemove << key;
-        }
-    }
-    for (const QString& key : keysToRemove) {
-        inputs.remove(key);
-    }
 
     polygonInputsX.clear();
     polygonInputsY.clear();
@@ -147,6 +149,46 @@ void ShapeInputDialog::updatePolygonInputs(int count) {
     }
 }
 
+void ShapeInputDialog::updatePolylineInputs(int count) {
+
+    for (int i = 0; i < polylineInputsX.size(); ++i) {
+        formLayout->removeRow(formLayout->rowCount() - 1);
+        formLayout->removeRow(formLayout->rowCount() - 1);
+        formLayout->removeRow(formLayout->rowCount() - 1);
+    }
+
+    polylineInputsX.clear();
+    polylineInputsY.clear();
+    polylineInputsZ.clear();
+
+    for (int i = 0; i < count; ++i) {
+        QDoubleSpinBox* x = new QDoubleSpinBox; x->setRange(-10000, 10000); x->setValue(i);
+        QDoubleSpinBox* y = new QDoubleSpinBox; y->setRange(-10000, 10000); y->setValue(0);
+        QDoubleSpinBox* z = new QDoubleSpinBox; z->setRange(-10000, 10000); z->setValue(0);
+
+        formLayout->addRow(QString("P%1 - X:").arg(i + 1), x);
+        formLayout->addRow(QString("P%1 - Y:").arg(i + 1), y);
+        formLayout->addRow(QString("P%1 - Z:").arg(i + 1), z);
+
+        polylineInputsX.append(x);
+        polylineInputsY.append(y);
+        polylineInputsZ.append(z);
+    }
+    qDebug() << "count: " << count;
+}
+
+
+QVector<QVector3D> ShapeInputDialog::getPolylinePoints() const {
+    QVector<QVector3D> points;
+    int count = polylineInputsX.size();
+    for (int i = 0; i < count; ++i) {
+        float x = polylineInputsX[i]->value();
+        float y = polylineInputsY[i]->value();
+        float z = polylineInputsZ[i]->value();
+        points.append(QVector3D(x, y, z));
+    }
+    return points;
+}
 
 
 double ShapeInputDialog::getValue(const QString& field) const {

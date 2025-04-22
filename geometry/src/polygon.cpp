@@ -79,8 +79,6 @@ std::vector<std::pair<std::vector<double>, std::vector<double>>> Polygon::getEdg
         size_t next = (i + 1) % n; // wrap around to close polygon
         edges.push_back({ vertices[i], vertices[next] });
     }
-    std::cout << "Polygon::getEdges called. Total vertices: " << vertices.size() << std::endl;
-
 
     return edges;
 }
