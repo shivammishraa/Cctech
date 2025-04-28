@@ -16,10 +16,8 @@ public:
     void saveToFile(const std::string& filename) const;
     void plot(const std::string& filename) const;
 
-    vector<vector<vector<double>>> getCuboidTriangles()
-    {
-        return triangles;
-    }
+    // Returns the parsed triangles
+    vector<vector<vector<double>>> getTriangles() const;
 };
 
 #endif

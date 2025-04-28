@@ -23,33 +23,24 @@ struct VectorEqual {
 };
 
 // Constructor to parse the STL file
-STLShape::STLShape(const string& filepath) {
-    ifstream file(filepath);
+STLShape::STLShape(const std::string& filepath)
+{
+    std::ifstream file(filepath);
     if (!file.is_open()) {
-        cerr << "Error: Could not open STL file: " << filepath << endl;
-        return;
+        throw std::runtime_error("Could not open STL file.");
     }
 
-    unordered_set<array<double, 3>, VectorHash, VectorEqual> uniqueVertices;
+    std::string line;
+    std::vector<std::vector<double>> triangle(3, std::vector<double>(3));
+    int vertexCount = 0;
 
-    string line;
-    vector<vector<double>> triangle(3, vector<double>(3)); // Using vector instead of array
-    int vertexCount = 0, totalVerticesParsed = 0;
-
-    while (getline(file, line)) {
-        if (line.find("vertex") != string::npos) {
-            istringstream iss(line);
-            string temp;
+    while (std::getline(file, line)) {
+        if (line.find("vertex") != std::string::npos) {
+            std::istringstream iss(line);
+            std::string temp;
             double x, y, z;
             iss >> temp >> x >> y >> z;
-            totalVerticesParsed++;
-
-            triangle[vertexCount] = { x, y, z };
-
-            std::array<double, 3> vertex = { x, y, z };
-            uniqueVertices.insert(vertex);
-
-            vertexCount++;
+            triangle[vertexCount++] = { x, y, z };
 
             if (vertexCount == 3) {
                 triangles.push_back(triangle);
@@ -58,14 +49,10 @@ STLShape::STLShape(const string& filepath) {
         }
     }
 
-    file.close();
-
-    cout << "STL File Loaded: " << filepath << endl;
-    cout << " Total Vertices Parsed       : " << totalVerticesParsed << endl;
-    cout << " Unique Vertices Stored      : " << uniqueVertices.size() << endl;
-    cout << " Total Triangles Extracted   : " << triangles.size() << endl << endl;
+    if (triangles.empty()) {
+        throw std::runtime_error("No triangles found in STL file.");
+    }
 }
-
 
 // Save triangles to .dat file using buffered write (stringstream)
 void STLShape::saveToFile(const string& filename) const {
@@ -101,7 +88,7 @@ void STLShape::saveToFile(const string& filename) const {
 void STLShape::plot(const string& filename) const {
     saveToFile(filename);
 
-    string command = 
+    string command =
         "gnuplot -p -e \""
         "set terminal wxt; "
         "set xlabel 'X'; "
@@ -110,4 +97,8 @@ void STLShape::plot(const string& filename) const {
         "set view equal xyz; "
         "splot '" + filename + "' with lines 7 linecolor 'blue'\"";
     system(command.c_str());
+}
+
+std::vector<std::vector<std::vector<double>>> STLShape::getTriangles() const {
+    return triangles; // Already optimized, no redundant data
 }

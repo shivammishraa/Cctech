@@ -27,6 +27,7 @@ include_directories(
 set(SOURCES
     main.cpp
     glwidget.cpp
+    BezierWidget.cpp
     mainwindow.cpp
     shapeinputdialog.cpp
     shapefactory.cpp               
@@ -36,6 +37,7 @@ set(SOURCES
     ../geometry/src/cylinder.cpp
     ../geometry/src/line3D.cpp
     ../geometry/src/objToStl.cpp
+    ../geometry/src/obj_shape.cpp
     ../geometry/src/plot_utils.cpp
     ../geometry/src/polygon.cpp
     ../geometry/src/polyline.cpp
@@ -49,6 +51,7 @@ set(SOURCES
 # Header files
 set(HEADERS
     glwidget.h
+    BezierWidget.h
     mainwindow.h
     shapeinputdialog.h
     shape3d.h                      
@@ -59,6 +62,7 @@ set(HEADERS
     ../geometry/include/cylinder.h
     ../geometry/include/line3D.h
     ../geometry/include/objToStl.h
+    ../geometry/include/obj_shape.h
     ../geometry/include/plot_utils.h
     ../geometry/include/polygon.h
     ../geometry/include/polyline.h

@@ -1,5 +1,7 @@
 C:/Users/Shivam\ Mishra/Desktop/Project/build/GeometryVisualizer_autogen/EWIEGA46WW/moc_glwidget.cpp: C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/glwidget.h \
   C:/Users/Shivam\ Mishra/Desktop/Project/build/GeometryVisualizer_autogen/moc_predefs.h \
+  C:/Qt/6.9.0/mingw_64/include/QtCore/QHash \
+  C:/Qt/6.9.0/mingw_64/include/QtCore/QObject \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QPoint \
   C:/Qt/6.9.0/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/q20functional.h \
@@ -164,11 +166,21 @@ C:/Users/Shivam\ Mishra/Desktop/Project/build/GeometryVisualizer_autogen/EWIEGA4
   C:/Qt/6.9.0/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qtguiglobal.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qtransform.h \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/qvector2d.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qvector3d.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qvector4d.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qvectornd.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.9.0/mingw_64/include/QtOpenGL/QOpenGLBuffer \
+  C:/Qt/6.9.0/mingw_64/include/QtOpenGL/QOpenGLShader \
+  C:/Qt/6.9.0/mingw_64/include/QtOpenGL/QOpenGLShaderProgram \
+  C:/Qt/6.9.0/mingw_64/include/QtOpenGL/QOpenGLVertexArrayObject \
+  C:/Qt/6.9.0/mingw_64/include/QtOpenGL/qopenglbuffer.h \
+  C:/Qt/6.9.0/mingw_64/include/QtOpenGL/qopenglshaderprogram.h \
+  C:/Qt/6.9.0/mingw_64/include/QtOpenGL/qopenglvertexarrayobject.h \
+  C:/Qt/6.9.0/mingw_64/include/QtOpenGL/qtopenglexports.h \
+  C:/Qt/6.9.0/mingw_64/include/QtOpenGL/qtopenglglobal.h \
   C:/Qt/6.9.0/mingw_64/include/QtOpenGLWidgets/QOpenGLWidget \
   C:/Qt/6.9.0/mingw_64/include/QtOpenGLWidgets/qopenglwidget.h \
   C:/Qt/6.9.0/mingw_64/include/QtOpenGLWidgets/qtopenglwidgetsexports.h \

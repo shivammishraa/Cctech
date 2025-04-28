@@ -33,6 +33,7 @@ public:
     QLabel *shapeLabel;
     QComboBox *Shapes;
     QPushButton *pushButton;
+    QPushButton *uploadButton;
     QSpacerItem *horizontalSpacer;
     QHBoxLayout *dimensionInputsLayout;
     GLWidget *openGLWidget;
@@ -69,6 +70,11 @@ public:
         pushButton->setObjectName("pushButton");
 
         topBarLayout->addWidget(pushButton);
+
+        uploadButton = new QPushButton(centralwidget);
+        uploadButton->setObjectName("uploadButton");
+
+        topBarLayout->addWidget(uploadButton);
 
         horizontalSpacer = new QSpacerItem(0, 0, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
@@ -110,6 +116,7 @@ public:
         Shapes->setItemText(5, QCoreApplication::translate("MainWindow", "Polyline", nullptr));
 
         pushButton->setText(QCoreApplication::translate("MainWindow", "Plot Shape", nullptr));
+        uploadButton->setText(QCoreApplication::translate("MainWindow", "Upload File", nullptr));
     } // retranslateUi
 
 };

@@ -1,9 +1,6 @@
 {
   "ExpandedNodes": [
     "",
-    "\\geometry",
-    "\\geometry\\include",
-    "\\geometry\\src",
     "\\projectGui"
   ],
   "SelectedNode": "\\projectGui\\mainwindow.cpp",

@@ -372,6 +372,12 @@
 			null
 		],
 		[
+			"C:/Users/Shivam Mishra/Desktop/Project/geometry/include/obj_shape.h",
+			"MU",
+			"L5PHSTAEVO/moc_obj_shape.cpp",
+			null
+		],
+		[
 			"C:/Users/Shivam Mishra/Desktop/Project/geometry/include/plot_utils.h",
 			"MU",
 			"L5PHSTAEVO/moc_plot_utils.cpp",
@@ -429,6 +435,12 @@
 			"C:/Users/Shivam Mishra/Desktop/Project/geometry/include/triangle.h",
 			"MU",
 			"L5PHSTAEVO/moc_triangle.cpp",
+			null
+		],
+		[
+			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/BezierWidget.h",
+			"MU",
+			"EWIEGA46WW/moc_BezierWidget.cpp",
 			null
 		],
 		[
@@ -567,6 +579,11 @@
 			null
 		],
 		[
+			"C:/Users/Shivam Mishra/Desktop/Project/geometry/src/obj_shape.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/Shivam Mishra/Desktop/Project/geometry/src/plot_utils.cpp",
 			"MU",
 			null
@@ -608,6 +625,11 @@
 		],
 		[
 			"C:/Users/Shivam Mishra/Desktop/Project/geometry/src/triangle.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/BezierWidget.cpp",
 			"MU",
 			null
 		],

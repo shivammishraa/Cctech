@@ -17,7 +17,9 @@ int main(int argc, char* argv[])
 
     qDebug() << "Starting application...";
     MainWindow window;
-    window.setWindowTitle("STL Viewer - OpenGL & Qt");
+    window.setWindowTitle("Geometery Visualizer");
+    window.resize(800, 600);
+
     window.show();
 
     return app.exec();

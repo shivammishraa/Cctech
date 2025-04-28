@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "glwidget.h"
+#include "BezierWidget.h" 
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,11 +18,13 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_plotButton_clicked();  // <-- Correctly connected in cpp
+    void on_plotButton_clicked();
+    void on_uploadButton_clicked();
+    void openBezierWidget(); 
 
 private:
     Ui::MainWindow* ui;
-    GLWidget* glWidget;  // <-- Properly casted from promoted widget
+    GLWidget* glWidget;
 };
 
 #endif // MAINWINDOW_H
