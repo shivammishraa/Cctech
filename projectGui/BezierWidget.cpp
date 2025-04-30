@@ -1,5 +1,4 @@
 #include "BezierWidget.h"
-#include "BezierWidget.h"
 #include <QMouseEvent>
 #include <QOpenGLFunctions>
 #include <QPushButton>
@@ -7,7 +6,7 @@
 #include <QtMath>
 #include <QDebug>
 
-BezierWidget::BezierWidget(QWidget* parent) : QOpenGLWidget(parent) {
+BezierWidget::BezierWidget(QWidget *parent) : QOpenGLWidget(parent) {
     revolveButton = new QPushButton("Revolve", this);
     revolveButton->setGeometry(10, 10, 100, 30);
     connect(revolveButton, &QPushButton::clicked, this, &BezierWidget::computeRevolution);
@@ -25,7 +24,7 @@ void BezierWidget::resizeGL(int w, int h) {
     glViewport(0, 0, w, h);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho(-width() / 2, width() / 2, -height() / 2, height() / 2, -500, 500);
+    glOrtho(-width()/2, width()/2, -height()/2, height()/2, -500, 500);
     glMatrixMode(GL_MODELVIEW);
 }
 
@@ -38,23 +37,23 @@ void BezierWidget::paintGL() {
 
 
     //Draws the polyline between control points.
-    glColor3f(0.7f, 0.7f, 0.7f);
+    glColor3f(0.5f, 0.5f, 0.7f);
     glBegin(GL_LINE_STRIP);
-    for (const auto& pt : controlPoints)
+    for (const auto &pt : controlPoints)
         glVertex3f(pt.x(), pt.y(), 0.0f);
     glEnd();
 
     //Draws the Bezier curve.
     glColor3f(0.0f, 0.5f, 1.0f);
     glBegin(GL_LINE_STRIP);
-    for (const auto& pt : bezierCurve)
+    for (const auto &pt : bezierCurve)
         glVertex3f(pt.x(), pt.y(), 0.0f);
     glEnd();
 
     //Draws red points at control points.
     glColor3f(1.0f, 0.2f, 0.2f);
     glBegin(GL_POINTS);
-    for (const auto& pt : controlPoints)
+    for (const auto &pt : controlPoints)
         glVertex3f(pt.x(), pt.y(), 0.0f);
     glEnd();
 
@@ -74,20 +73,19 @@ void BezierWidget::paintGL() {
     }
 }
 
-QPointF BezierWidget::mapToOpenGLCoordinates(const QPoint& mousePos) {
+QPointF BezierWidget::mapToOpenGLCoordinates(const QPoint &mousePos) {
     float x = mousePos.x() - width() / 2;
     float y = (height() / 2) - mousePos.y();
     return QPointF(x, y);
 }
 
-void BezierWidget::mousePressEvent(QMouseEvent* event) {
+void BezierWidget::mousePressEvent(QMouseEvent *event) {
     QPointF mapped = mapToOpenGLCoordinates(event->pos());
     if (event->button() == Qt::LeftButton) {
         controlPoints.append(mapped);
         computeBezierCurve();
         update();
-    }
-    else if (event->button() == Qt::RightButton) {
+    } else if (event->button() == Qt::RightButton) {
         for (int i = 0; i < controlPoints.size(); ++i) {
             if (QLineF(mapped, controlPoints[i]).length() < 10.0f) {
                 draggedPointIndex = i;
@@ -98,7 +96,7 @@ void BezierWidget::mousePressEvent(QMouseEvent* event) {
 }
 
 //If a point is selected, this updates its position when the mouse is moved.
-void BezierWidget::mouseMoveEvent(QMouseEvent* event) {
+void BezierWidget::mouseMoveEvent(QMouseEvent *event) {
     if (draggedPointIndex != -1) {
         controlPoints[draggedPointIndex] = mapToOpenGLCoordinates(event->pos());
         computeBezierCurve();
@@ -107,7 +105,7 @@ void BezierWidget::mouseMoveEvent(QMouseEvent* event) {
     }
 }
 
-void BezierWidget::mouseReleaseEvent(QMouseEvent*) {
+void BezierWidget::mouseReleaseEvent(QMouseEvent *) {
     draggedPointIndex = -1;
 }
 
@@ -116,7 +114,7 @@ void BezierWidget::handleRightClick() {
     update();
 }
 
-// Generates a smooth curve by calling De Casteljau’s algorithm with different values of t.
+// Generates a smooth curve by calling De Casteljauâ€™s algorithm with different values of t.
 void BezierWidget::computeBezierCurve() {
     bezierCurve.clear();
     if (controlPoints.size() < 2)
@@ -125,7 +123,7 @@ void BezierWidget::computeBezierCurve() {
         bezierCurve.append(deCasteljau(t));
 }
 
-//This is De Casteljau’s algorithm: recursively finds points between points to draw a Bézier curve.
+//This is De Casteljauâ€™s algorithm: recursively finds points between points to draw a BÃ©zier curve.
 //
 QPointF BezierWidget::deCasteljau(float t) {
     QVector<QPointF> pts = controlPoints;
@@ -141,7 +139,7 @@ QPointF BezierWidget::deCasteljau(float t) {
     return pts[0];
 }
 
-//Rotates the 2D Bézier curve around the Y-axis to form a 3D mesh.
+//Rotates the 2D BÃ©zier curve around the Y-axis to form a 3D mesh.
 //Uses 72 steps for smoothness.
 void BezierWidget::computeRevolution() {
     revolutionMesh.clear();
@@ -153,7 +151,7 @@ void BezierWidget::computeRevolution() {
     for (int i = 0; i <= steps; ++i) {
         float angle = i * angleStep;
         QVector<QVector3D> ring;
-        for (const auto& pt : bezierCurve) {
+        for (const auto &pt : bezierCurve) {
             QVector3D point3D(pt.x(), pt.y(), 0.0f);
             ring.append(rotatePointAroundAxis(point3D, angle, QVector3D(0, 1, 0)));
         }
@@ -163,10 +161,10 @@ void BezierWidget::computeRevolution() {
 
 //Rotates a point around the Y-axis by a given angle.
 //Uses a QMatrix4x4 to perform the rotation.
-QVector3D BezierWidget::rotatePointAroundAxis(const QVector3D& point, float angle, const QVector3D& axis) {
+QVector3D BezierWidget::rotatePointAroundAxis(const QVector3D &point, float angle, const QVector3D &axis) {
     QMatrix4x4 rot;
     rot.rotate(angle, axis);
-
+ 
     return rot.map(point);
 }
 

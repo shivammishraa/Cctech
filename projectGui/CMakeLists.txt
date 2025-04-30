@@ -28,6 +28,7 @@ set(SOURCES
     main.cpp
     glwidget.cpp
     BezierWidget.cpp
+    PolygonWidget.cpp
     mainwindow.cpp
     shapeinputdialog.cpp
     shapefactory.cpp               
@@ -52,6 +53,7 @@ set(SOURCES
 set(HEADERS
     glwidget.h
     BezierWidget.h
+    PolygonWidget.h
     mainwindow.h
     shapeinputdialog.h
     shape3d.h                      

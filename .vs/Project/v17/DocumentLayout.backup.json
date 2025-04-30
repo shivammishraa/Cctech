@@ -3,20 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\glwidget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\glwidget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\BezierWidget.cpp||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\BezierWidget.cpp||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\glwidget.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\glwidget.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\BezierWidget.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\BezierWidget.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\mainwindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\mainwindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\glwidget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\glwidget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapefactory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\shapefactory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapeinputdialog.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\shapeinputdialog.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapeinputdialog.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\shapeinputdialog.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapefactory.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\shapefactory.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\glwidget.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\glwidget.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\src\\obj_shape.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -33,14 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\src\\stl_shape.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:geometry\\src\\stl_shape.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\mainwindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\mainwindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,50 +74,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "obj_shape.cpp",
-              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\src\\obj_shape.cpp",
-              "RelativeDocumentMoniker": "geometry\\src\\obj_shape.cpp",
-              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\src\\obj_shape.cpp",
-              "RelativeToolTip": "geometry\\src\\obj_shape.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "shapefactory.h",
+              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapefactory.h",
+              "RelativeDocumentMoniker": "projectGui\\shapefactory.h",
+              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapefactory.h",
+              "RelativeToolTip": "projectGui\\shapefactory.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-28T13:20:37.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "shapeinputdialog.cpp",
+              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapeinputdialog.cpp",
+              "RelativeDocumentMoniker": "projectGui\\shapeinputdialog.cpp",
+              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapeinputdialog.cpp",
+              "RelativeToolTip": "projectGui\\shapeinputdialog.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-23T12:10:58.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "obj_shape.h",
-              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\include\\obj_shape.h",
-              "RelativeDocumentMoniker": "geometry\\include\\obj_shape.h",
-              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\include\\obj_shape.h",
-              "RelativeToolTip": "geometry\\include\\obj_shape.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-23T12:10:38.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "stl_shape.h",
-              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\include\\stl_shape.h",
-              "RelativeDocumentMoniker": "geometry\\include\\stl_shape.h",
-              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\include\\stl_shape.h",
-              "RelativeToolTip": "geometry\\include\\stl_shape.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-23T11:17:17.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T13:20:24.365Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "shapefactory.cpp",
+              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapefactory.cpp",
+              "RelativeDocumentMoniker": "projectGui\\shapefactory.cpp",
+              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapefactory.cpp",
+              "RelativeToolTip": "projectGui\\shapefactory.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-28T13:20:07.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BezierWidget.h",
+              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\BezierWidget.h",
+              "RelativeDocumentMoniker": "projectGui\\BezierWidget.h",
+              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\BezierWidget.h",
+              "RelativeToolTip": "projectGui\\BezierWidget.h",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-28T13:11:46.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BezierWidget.cpp",
+              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\BezierWidget.cpp",
+              "RelativeDocumentMoniker": "projectGui\\BezierWidget.cpp",
+              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\BezierWidget.cpp",
+              "RelativeToolTip": "projectGui\\BezierWidget.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-28T13:11:09.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "stl_shape.cpp",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\src\\stl_shape.cpp",
               "RelativeDocumentMoniker": "geometry\\src\\stl_shape.cpp",
@@ -101,84 +148,131 @@
               "RelativeToolTip": "geometry\\src\\stl_shape.cpp",
               "ViewState": "AgIAAEkAAAAAAAAAAAAmwGYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-23T11:17:03.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T11:17:03.465Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "glwidget.h",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\glwidget.h",
               "RelativeDocumentMoniker": "projectGui\\glwidget.h",
               "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\glwidget.h",
               "RelativeToolTip": "projectGui\\glwidget.h",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-15T05:03:52.72Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T05:03:52.72Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "glwidget.cpp",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\glwidget.cpp",
               "RelativeDocumentMoniker": "projectGui\\glwidget.cpp",
               "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\glwidget.cpp",
               "RelativeToolTip": "projectGui\\glwidget.cpp",
-              "ViewState": "AgIAANkAAAAAAAAAAAAYwP8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-15T04:58:55.806Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "mainwindow.cpp",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\mainwindow.cpp",
               "RelativeDocumentMoniker": "projectGui\\mainwindow.cpp",
               "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\mainwindow.cpp",
               "RelativeToolTip": "projectGui\\mainwindow.cpp",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAG4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-14T13:22:48.629Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CMakeLists.txt",
-              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\CMakeLists.txt",
-              "RelativeDocumentMoniker": "projectGui\\CMakeLists.txt",
-              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\CMakeLists.txt",
-              "RelativeToolTip": "projectGui\\CMakeLists.txt",
-              "ViewState": "AgIAABMAAAAAAAAAAAAowC4AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-04-15T05:28:48.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "mainwindow.h",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\mainwindow.h",
               "RelativeDocumentMoniker": "projectGui\\mainwindow.h",
               "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\mainwindow.h",
               "RelativeToolTip": "projectGui\\mainwindow.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-14T13:22:45.979Z"
+              "WhenOpened": "2025-04-14T13:22:45.979Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
+              "Title": "CMakeLists.txt",
+              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\CMakeLists.txt",
+              "RelativeDocumentMoniker": "projectGui\\CMakeLists.txt",
+              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\CMakeLists.txt",
+              "RelativeToolTip": "projectGui\\CMakeLists.txt",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-04-15T05:28:48.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\main.cpp",
               "RelativeDocumentMoniker": "projectGui\\main.cpp",
               "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\main.cpp",
               "RelativeToolTip": "projectGui\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-15T13:12:06.086Z"
+              "WhenOpened": "2025-04-15T13:12:06.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "shapeinputdialog.h",
+              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapeinputdialog.h",
+              "RelativeDocumentMoniker": "projectGui\\shapeinputdialog.h",
+              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapeinputdialog.h",
+              "RelativeToolTip": "projectGui\\shapeinputdialog.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-28T13:20:41.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "stl_shape.h",
+              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\include\\stl_shape.h",
+              "RelativeDocumentMoniker": "geometry\\include\\stl_shape.h",
+              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\include\\stl_shape.h",
+              "RelativeToolTip": "geometry\\include\\stl_shape.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-23T11:17:17.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "obj_shape.h",
+              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\include\\obj_shape.h",
+              "RelativeDocumentMoniker": "geometry\\include\\obj_shape.h",
+              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\include\\obj_shape.h",
+              "RelativeToolTip": "geometry\\include\\obj_shape.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-23T12:10:38.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "obj_shape.cpp",
+              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\src\\obj_shape.cpp",
+              "RelativeDocumentMoniker": "geometry\\src\\obj_shape.cpp",
+              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\src\\obj_shape.cpp",
+              "RelativeToolTip": "geometry\\src\\obj_shape.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-23T12:10:58.529Z"
             }
           ]
         }
