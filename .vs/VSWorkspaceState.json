@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\application\\src",
     "\\projectGui"
   ],
-  "SelectedNode": "\\projectGui\\BezierWidget.h",
+  "SelectedNode": "\\projectGui\\shape3d.h",
   "PreviewInSolutionExplorer": false
 }

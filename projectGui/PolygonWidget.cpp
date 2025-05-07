@@ -43,7 +43,7 @@ void PolygonWidget::paintGL() {
     glRotatef(rotationY, 0.0f, 1.0f, 0.0f);
     glTranslatef(-center.x(), -center.y(), 0.0f);
 
-    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     glColor3f(0.0f, 0.0f, 1.0f);
 
     if (!polygonPoints.isEmpty()) {

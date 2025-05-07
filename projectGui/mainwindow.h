@@ -26,11 +26,14 @@ private slots:
     void openGLWidget();     // Slot to switch back to GLWidget
     void openPolygonWidget(); // Slot to open the PolygonWidget window
 
+    
 private:
     Ui::MainWindow* ui;
     QStackedWidget* stackedWidget; // Stacked widget to manage views
     GLWidget* glWidget;
     BezierWidget* bezierWidget;
+    PolygonWidget* polygonWidget;
+    
 };
 
 #endif // MAINWINDOW_H

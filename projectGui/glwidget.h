@@ -10,7 +10,6 @@
 #include <QHash>
 #include <QOpenGLShaderProgram>
 #include <QOpenGLShader>
-
 #include <QOpenGLBuffer>
 #include <QOpenGLVertexArrayObject>
 
@@ -33,7 +32,7 @@ protected:
     void mouseMoveEvent(QMouseEvent* event) override;
 
 private:
-    bool initialized = false;
+bool initialized = false;
     std::vector<std::pair<QVector3D, QVector3D>> shapeEdges;
     QMatrix4x4 projection;
     QOpenGLShaderProgram shaderProgram;

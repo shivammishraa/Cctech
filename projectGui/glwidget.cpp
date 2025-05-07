@@ -6,6 +6,12 @@
 #include <QMouseEvent>
 #include <unordered_map>
 #include <QtGlobal>
+#include <QOpenGLBuffer>
+#include <QOpenGLVertexArrayObject>
+#include <memory>
+#include <shape.h>
+#include <stl_shape.h>
+#include <obj_shape.h>
 
 
 inline uint qHash(const QVector3D& key, uint seed = 0) noexcept
