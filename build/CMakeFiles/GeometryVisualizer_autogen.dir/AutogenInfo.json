@@ -444,6 +444,12 @@
 			null
 		],
 		[
+			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/BooleanOperationWidget.h",
+			"MU",
+			"EWIEGA46WW/moc_BooleanOperationWidget.cpp",
+			null
+		],
+		[
 			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/PolygonWidget.h",
 			"MU",
 			"EWIEGA46WW/moc_PolygonWidget.cpp",
@@ -636,6 +642,11 @@
 		],
 		[
 			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/BezierWidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/BooleanOperationWidget.cpp",
 			"MU",
 			null
 		],

@@ -8,7 +8,9 @@
 #include "stl_shape.h"
 #include "obj_shape.h"
 #include "bezierwidget.h"
-#include "PolygonWidget.h" // Include PolygonWidget header
+#include "PolygonWidget.h"
+#include "BooleanOperationWidget.h"
+
 #include <memory>
 #include <QMessageBox>
 #include <QFileDialog>
@@ -19,54 +21,58 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QListWidget>
-using namespace std;
+
 using namespace std;
 
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent),
-    ui(new Ui::MainWindow),
-    stackedWidget(new QStackedWidget(this)),
-    glWidget(new GLWidget(this)),
-    bezierWidget(new BezierWidget(this))
+      ui(new Ui::MainWindow),
+      stackedWidget(new QStackedWidget(this)),
+      glWidget(new GLWidget(this)),
+      bezierWidget(new BezierWidget(this))
 {
-    ui->setupUi(this); // Ensure the UI is initialized
+    ui->setupUi(this);
     setWindowTitle("Shape Viewer - OpenGL & Qt");
 
-    // Add GLWidget and BezierWidget to the stacked widget
+    // Setup stacked widget
     stackedWidget->addWidget(glWidget);
     stackedWidget->addWidget(bezierWidget);
-
-    // Replace the OpenGL widget in the UI with the stacked widget
     ui->verticalLayout->replaceWidget(ui->openGLWidget, stackedWidget);
-    delete ui->openGLWidget; // Remove the old OpenGL widget
+    delete ui->openGLWidget;
 
-    // Connect buttons to their respective slots
+    // Button: Plot
     connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::on_plotButton_clicked);
+
+    // Button: Upload
     connect(ui->uploadButton, &QPushButton::clicked, this, &MainWindow::on_uploadButton_clicked);
 
-    // Add the "Bezier Tool" button programmatically
-    QPushButton* bezierButton = new QPushButton("Bezier Tool", this);
-    bezierButton->setObjectName("bezierButton"); // Set an object name for debugging
-    ui->topBarLayout->insertWidget(ui->topBarLayout->count() - 1, bezierButton); // Add before the spacer
+    // Bezier Tool
+    auto bezierButton = new QPushButton("Bezier Tool", this);
+    ui->topBarLayout->insertWidget(ui->topBarLayout->count() - 1, bezierButton);
     connect(bezierButton, &QPushButton::clicked, this, &MainWindow::openBezierWidget);
 
-    // Add the "Extrusion Tool" button programmatically
-    QPushButton* extrusionButton = new QPushButton("Extrusion Tool", this);
-    extrusionButton->setObjectName("extrusionButton"); // Set an object name for debugging
-    ui->topBarLayout->insertWidget(ui->topBarLayout->count() - 1, extrusionButton); // Add before the spacer
+    // Extrusion Tool
+    auto extrusionButton = new QPushButton("Extrusion Tool", this);
+    ui->topBarLayout->insertWidget(ui->topBarLayout->count() - 1, extrusionButton);
     connect(extrusionButton, &QPushButton::clicked, this, &MainWindow::openPolygonWidget);
 
-    // Add a "Back to GL" button programmatically
-    QPushButton* backButton = new QPushButton("Back to GL", this);
-    backButton->setObjectName("backButton"); // Set an object name for debugging
-    ui->topBarLayout->insertWidget(ui->topBarLayout->count() - 1, backButton); // Add before the spacer
+    // Back to GL
+    auto backButton = new QPushButton("Back to GL", this);
+    ui->topBarLayout->insertWidget(ui->topBarLayout->count() - 1, backButton);
     connect(backButton, &QPushButton::clicked, this, &MainWindow::openGLWidget);
 
-    qDebug() << "Buttons connected to slots.";
+    // Boolean Operation Tool
+    auto booleanOperationButton = new QPushButton("Boolean Operation Tool", this);
+    ui->topBarLayout->insertWidget(ui->topBarLayout->count() - 1, booleanOperationButton);
+    connect(booleanOperationButton, &QPushButton::clicked, this, &MainWindow::openBooleanOperationWidget);
 
-    // Populate shape combo box
+    // Shape dropdown population
+    ui->Shapes->addItem("Cuboid");
+    ui->Shapes->addItem("Sphere");
+    ui->Shapes->addItem("Polygon");
+    ui->Shapes->addItem("Polyline");
     ui->Shapes->addItem("Bezier");
-    // Add more shapes here like: ui->Shapes->addItem("Cylinder");
+    // Add more shape names here as needed
 }
 
 MainWindow::~MainWindow()
@@ -80,25 +86,20 @@ void MainWindow::on_plotButton_clicked()
     auto shape = createShapeFromDialog(selectedShape, this);
 
     if (shape) {
-        vector<pair<vector<double>, vector<double>>> edges = shape->getEdges();
-
-        // Convert edges into QVector3D format for OpenGL
+        auto edges = shape->getEdges();
         std::vector<QVector3D> shapeVertices;
         for (const auto& edge : edges) {
             shapeVertices.push_back(QVector3D(edge.first[0], edge.first[1], edge.first[2]));
             shapeVertices.push_back(QVector3D(edge.second[0], edge.second[1], edge.second[2]));
         }
 
-        // Pass the vertices to GLWidget
         if (glWidget) {
             glWidget->setShapeVertices(edges);
             glWidget->update();
-        }
-        else {
+        } else {
             QMessageBox::critical(this, "Error", "OpenGL widget not initialized properly.");
         }
-    }
-    else {
+    } else {
         QMessageBox::warning(this, "Invalid Input", "Failed to create the selected shape.");
     }
 }
@@ -147,38 +148,31 @@ void MainWindow::on_uploadButton_clicked() {
 
 void MainWindow::openBezierWidget()
 {
-    stackedWidget->setCurrentWidget(bezierWidget); // Switch to BezierWidget
+    stackedWidget->setCurrentWidget(bezierWidget);
 }
 
 void MainWindow::openGLWidget()
 {
-    stackedWidget->setCurrentWidget(glWidget); // Switch back to GLWidget
+    stackedWidget->setCurrentWidget(glWidget);
 }
 
 void MainWindow::openPolygonWidget()
 {
-    // Create a new window for the Extrusion Tool
     QWidget* extrusionWindow = new QWidget();
     extrusionWindow->setWindowTitle("Extrusion Tool");
     extrusionWindow->resize(1020, 730);
 
-    // Create the main layout for the window
     QHBoxLayout* mainLayout = new QHBoxLayout(extrusionWindow);
-
-    // Add the PolygonWidget (OpenGL widget)
     PolygonWidget* polygonWidget = new PolygonWidget(extrusionWindow);
     polygonWidget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
-    // Create the right panel with buttons and shape list
     QVBoxLayout* rightPanel = new QVBoxLayout();
-
     QLabel* shapeLabel = new QLabel("Shapes List:", extrusionWindow);
     QListWidget* shapeList = new QListWidget(extrusionWindow);
     QPushButton* extrusionButton = new QPushButton("Extrusion", extrusionWindow);
     QPushButton* clearShapeButton = new QPushButton("Clear Shape", extrusionWindow);
     QPushButton* deleteShapeButton = new QPushButton("Delete Shape", extrusionWindow);
 
-    // Assemble the right panel
     rightPanel->addWidget(shapeLabel);
     rightPanel->addWidget(shapeList);
     rightPanel->addWidget(extrusionButton);
@@ -186,21 +180,17 @@ void MainWindow::openPolygonWidget()
     rightPanel->addWidget(deleteShapeButton);
     rightPanel->addStretch();
 
-    // Add the PolygonWidget and right panel to the main layout
     mainLayout->addWidget(polygonWidget, 1);
     mainLayout->addLayout(rightPanel);
 
-    // Connect the buttons to the PolygonWidget functionality
     connect(extrusionButton, &QPushButton::clicked, extrusionWindow, [polygonWidget, shapeList]() {
         QString shapeName = "Shape " + QString::number(shapeList->count() + 1);
         shapeList->addItem(shapeName);
         polygonWidget->addShape(shapeName);
-        qDebug() << "Extrusion performed, shape added:" << shapeName;
     });
 
     connect(clearShapeButton, &QPushButton::clicked, extrusionWindow, [polygonWidget]() {
         polygonWidget->clearCurrentShape();
-        qDebug() << "Current shape cleared. Ready to plot a new shape.";
     });
 
     connect(deleteShapeButton, &QPushButton::clicked, extrusionWindow, [polygonWidget, shapeList]() {
@@ -209,22 +199,24 @@ void MainWindow::openPolygonWidget()
             QString shapeName = selectedItem->text();
             polygonWidget->deleteShape(shapeName);
             delete shapeList->takeItem(shapeList->row(selectedItem));
-            qDebug() << "Shape deleted:" << shapeName;
-        } else {
-            qDebug() << "No shape selected to delete.";
         }
     });
 
     connect(shapeList, &QListWidget::itemClicked, extrusionWindow, [polygonWidget](QListWidgetItem* item) {
         polygonWidget->displayShape(item->text());
-        qDebug() << "Shape displayed:" << item->text();
     });
 
     connect(shapeList, &QListWidget::itemDoubleClicked, extrusionWindow, [](QListWidgetItem* item) {
         item->setFlags(item->flags() | Qt::ItemIsEditable);
     });
 
-    // Show the Extrusion Tool window
-    extrusionWindow->setAttribute(Qt::WA_DeleteOnClose); // Automatically delete when closed
+    extrusionWindow->setAttribute(Qt::WA_DeleteOnClose);
     extrusionWindow->show();
+}
+
+void MainWindow::openBooleanOperationWidget()
+{
+    auto* booleanWidget = new BooleanOperationWidget();
+    booleanWidget->setAttribute(Qt::WA_DeleteOnClose);
+    booleanWidget->show();
 }
