@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../projectGui/BooleanOperationWidget.h"
+#include "../../../projectGui/Boolean/BooleanOperationWidget.h"
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -42,8 +42,9 @@ template <> constexpr inline auto BooleanOperationWidget::qt_create_metaobjectda
         "onPlotShapeA",
         "",
         "onPlotShapeB",
-        "onPerformOperation",
-        "onIntersectionClicked"
+        "onIntersectionClicked",
+        "onSubtractionClicked",
+        "onUnionClicked"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -51,10 +52,12 @@ template <> constexpr inline auto BooleanOperationWidget::qt_create_metaobjectda
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onPlotShapeB'
         QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onPerformOperation'
-        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onIntersectionClicked'
+        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onSubtractionClicked'
         QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onUnionClicked'
+        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -80,8 +83,9 @@ void BooleanOperationWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _
         switch (_id) {
         case 0: _t->onPlotShapeA(); break;
         case 1: _t->onPlotShapeB(); break;
-        case 2: _t->onPerformOperation(); break;
-        case 3: _t->onIntersectionClicked(); break;
+        case 2: _t->onIntersectionClicked(); break;
+        case 3: _t->onSubtractionClicked(); break;
+        case 4: _t->onUnionClicked(); break;
         default: ;
         }
     }
@@ -107,14 +111,14 @@ int BooleanOperationWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

@@ -444,9 +444,15 @@
 			null
 		],
 		[
-			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/BooleanOperationWidget.h",
+			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/Boolean/BasicShapes2D.h",
 			"MU",
-			"EWIEGA46WW/moc_BooleanOperationWidget.cpp",
+			"DEBX34UDX6/moc_BasicShapes2D.cpp",
+			null
+		],
+		[
+			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/Boolean/BooleanOperationWidget.h",
+			"MU",
+			"DEBX34UDX6/moc_BooleanOperationWidget.cpp",
 			null
 		],
 		[
@@ -518,6 +524,7 @@
 		"C:/Users/Shivam Mishra/Desktop/Project/application/src",
 		"C:/Users/Shivam Mishra/Desktop/Project/projectGui/projectGui",
 		"C:/Users/Shivam Mishra/Desktop/Project/projectGui",
+		"C:/Users/Shivam Mishra/Desktop/Project/projectGui/Boolean",
 		"C:/Qt/6.9.0/mingw_64/include/QtWidgets",
 		"C:/Qt/6.9.0/mingw_64/include",
 		"C:/Qt/6.9.0/mingw_64/include/QtCore",
@@ -646,7 +653,12 @@
 			null
 		],
 		[
-			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/BooleanOperationWidget.cpp",
+			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/Boolean/BasicShapes2D.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/Boolean/BooleanOperationWidget.cpp",
 			"MU",
 			null
 		],

@@ -194,6 +194,7 @@ GeometryVisualizer_autogen/timestamp: \
 	C:/Qt/6.9.0/mingw_64/include/QtGui/QOpenGLFunctions \
 	C:/Qt/6.9.0/mingw_64/include/QtGui/QSurfaceFormat \
 	C:/Qt/6.9.0/mingw_64/include/QtGui/QTransform \
+	C:/Qt/6.9.0/mingw_64/include/QtGui/QVector2D \
 	C:/Qt/6.9.0/mingw_64/include/QtGui/QVector3D \
 	C:/Qt/6.9.0/mingw_64/include/QtGui/qaction.h \
 	C:/Qt/6.9.0/mingw_64/include/QtGui/qbitmap.h \
@@ -261,6 +262,7 @@ GeometryVisualizer_autogen/timestamp: \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QDialog \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QDoubleSpinBox \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QFormLayout \
+	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QHBoxLayout \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QLayout \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QMainWindow \
 	C:/Qt/6.9.0/mingw_64/include/QtWidgets/QPushButton \
@@ -748,8 +750,10 @@ GeometryVisualizer_autogen/timestamp: \
 	C:/Users/Shivam\ Mishra/Desktop/Project/geometry/src/triangle.cpp \
 	C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/BezierWidget.cpp \
 	C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/BezierWidget.h \
-	C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/BooleanOperationWidget.cpp \
-	C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/BooleanOperationWidget.h \
+	C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/Boolean/BasicShapes2D.cpp \
+	C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/Boolean/BasicShapes2D.h \
+	C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/Boolean/BooleanOperationWidget.cpp \
+	C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/Boolean/BooleanOperationWidget.h \
 	C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/CMakeLists.txt \
 	C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/PolygonWidget.cpp \
 	C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/PolygonWidget.h \

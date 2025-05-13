@@ -82,6 +82,7 @@
         "thread": "cpp",
         "variant": "cpp",
         "qmouseevent": "cpp",
-        "qopenglshaderprogram": "cpp"
+        "qopenglshaderprogram": "cpp",
+        "qwheelevent": "cpp"
     }
 }

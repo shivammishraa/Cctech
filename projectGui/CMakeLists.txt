@@ -21,6 +21,7 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/../application/src
     ${CMAKE_CURRENT_SOURCE_DIR}/projectGui      
     ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/Boolean
 )
 
 # Source files
@@ -29,7 +30,8 @@ set(SOURCES
     glwidget.cpp
     BezierWidget.cpp
     PolygonWidget.cpp
-    BooleanOperationWidget.cpp
+    Boolean/BooleanOperationWidget.cpp
+    Boolean/BasicShapes2D.cpp
     mainwindow.cpp
     shapeinputdialog.cpp
     shapefactory.cpp               
@@ -55,7 +57,8 @@ set(HEADERS
     glwidget.h
     BezierWidget.h
     PolygonWidget.h
-    BooleanOperationWidget.h
+    Boolean/BooleanOperationWidget.h
+    Boolean/BasicShapes2D.h
     mainwindow.h
     shapeinputdialog.h
     shape3d.h                      
@@ -95,4 +98,5 @@ target_link_libraries(${PROJECT_NAME}
     Qt6::OpenGL
     Qt6::OpenGLWidgets
     OpenGL::GL
+    
 )

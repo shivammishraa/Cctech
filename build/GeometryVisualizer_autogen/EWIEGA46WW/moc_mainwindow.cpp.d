@@ -155,6 +155,7 @@ C:/Users/Shivam\ Mishra/Desktop/Project/build/GeometryVisualizer_autogen/EWIEGA4
   C:/Qt/6.9.0/mingw_64/include/QtGui/QOpenGLFunctions \
   C:/Qt/6.9.0/mingw_64/include/QtGui/QSurfaceFormat \
   C:/Qt/6.9.0/mingw_64/include/QtGui/QTransform \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/QVector2D \
   C:/Qt/6.9.0/mingw_64/include/QtGui/QVector3D \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qbitmap.h \
@@ -219,6 +220,7 @@ C:/Users/Shivam\ Mishra/Desktop/Project/build/GeometryVisualizer_autogen/EWIEGA4
   C:/Qt/6.9.0/mingw_64/include/QtOpenGLWidgets/qtopenglwidgetsexports.h \
   C:/Qt/6.9.0/mingw_64/include/QtOpenGLWidgets/qtopenglwidgetsglobal.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QComboBox \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QHBoxLayout \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QStackedWidget \
@@ -461,7 +463,7 @@ C:/Users/Shivam\ Mishra/Desktop/Project/build/GeometryVisualizer_autogen/EWIEGA4
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/BezierWidget.h \
-  C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/BooleanOperationWidget.h \
+  C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/Boolean/BooleanOperationWidget.h \
   C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/PolygonWidget.h \
   C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/Structure.h \
   C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/glwidget.h

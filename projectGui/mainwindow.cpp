@@ -9,7 +9,7 @@
 #include "obj_shape.h"
 #include "bezierwidget.h"
 #include "PolygonWidget.h"
-#include "BooleanOperationWidget.h"
+#include "Boolean/BooleanOperationWidget.h"
 
 #include <memory>
 #include <QMessageBox>

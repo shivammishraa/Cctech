@@ -1,4 +1,4 @@
-C:/Users/Shivam\ Mishra/Desktop/Project/build/GeometryVisualizer_autogen/EWIEGA46WW/moc_BooleanOperationWidget.cpp: C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/BooleanOperationWidget.h \
+C:/Users/Shivam\ Mishra/Desktop/Project/build/GeometryVisualizer_autogen/DEBX34UDX6/moc_BooleanOperationWidget.cpp: C:/Users/Shivam\ Mishra/Desktop/Project/projectGui/Boolean/BooleanOperationWidget.h \
   C:/Users/Shivam\ Mishra/Desktop/Project/build/GeometryVisualizer_autogen/moc_predefs.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QList \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QObject \
@@ -148,6 +148,7 @@ C:/Users/Shivam\ Mishra/Desktop/Project/build/GeometryVisualizer_autogen/EWIEGA4
   C:/Qt/6.9.0/mingw_64/include/QtGui/QOpenGLFunctions \
   C:/Qt/6.9.0/mingw_64/include/QtGui/QSurfaceFormat \
   C:/Qt/6.9.0/mingw_64/include/QtGui/QTransform \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/QVector2D \
   C:/Qt/6.9.0/mingw_64/include/QtGui/QVector3D \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qbitmap.h \
@@ -198,6 +199,7 @@ C:/Users/Shivam\ Mishra/Desktop/Project/build/GeometryVisualizer_autogen/EWIEGA4
   C:/Qt/6.9.0/mingw_64/include/QtOpenGLWidgets/qtopenglwidgetsexports.h \
   C:/Qt/6.9.0/mingw_64/include/QtOpenGLWidgets/qtopenglwidgetsglobal.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QComboBox \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QHBoxLayout \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QVBoxLayout \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QWidget \
