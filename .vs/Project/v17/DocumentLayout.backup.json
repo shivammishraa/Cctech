@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\mainwindow.ui||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\mainwindow.ui||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\PolygonWidget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\PolygonWidget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\structure.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\structure.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\BezierWidget.cpp||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\BezierWidget.cpp||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapeinputdialog.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\shapeinputdialog.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapefactory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\shapefactory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\BezierWidget.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -29,14 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapefactory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\shapefactory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapeinputdialog.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projectGui\\shapeinputdialog.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapeinputdialog.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -74,11 +86,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
+              "Title": "mainwindow.ui",
+              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\mainwindow.ui",
+              "RelativeDocumentMoniker": "projectGui\\mainwindow.ui",
+              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\mainwindow.ui",
+              "RelativeToolTip": "projectGui\\mainwindow.ui",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEkAAAANAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG4SURBVDhPlVNLSgNBEK2ezkwk95CACyMYyVpBcZdDuA9eQfQCHsGdZJWN6CCKQZJNMsvgEQKS/Xy6p9uqmj8RPy9507/6vK6aEdZaCIIAEFYIkdLkO6CdjOMYpJRmMBhI2hO4TQewXC6JNk1Ta3RqU5VanWirI2VVmNg4jJnT6dRuPjd2NpvF5Ed08uwYjLMgi9GCyROAyYgKodPpQHe3683nc00\u002BDj1KGPwbdEsr8joP6LouLIIFrD5WZC0x\u002BY5DBkhRN7R0OdaUgfZun9/gYK8HR70\u002B9PcPwfM88vMcvDcUrGcmkiKibEm4PD8G6UqQnuSARhvyMUUAQaOQDhq0mBd393zBm0cfHAxwPXnCSgksFv5w1EZz0m0FWCwildWR2C1UwGsE\u002BlFZWYHWHMA0akAKhIMZkGiX9aZZ5lJB7ldegckZagquJg9ZHXLwGUeGysf3fVq7Sqnk7OSUD38DvmTw8v5KnWg3FKhYgcE61PcKapUVjecYgK6A86oL9J5Ta5IwARWqLepYl3NCFEUcrNkFrO5fkftUCijif0D2w\u002BHQiPF4TOv2er2OfvqcEfwJFyC1o9FIfAEY9LSsVtvctwAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-05-14T12:22:03.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PolygonWidget.cpp",
+              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\PolygonWidget.cpp",
+              "RelativeDocumentMoniker": "projectGui\\PolygonWidget.cpp",
+              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\PolygonWidget.cpp",
+              "RelativeToolTip": "projectGui\\PolygonWidget.cpp",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-30T14:09:52.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "structure.h",
+              "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\structure.h",
+              "RelativeDocumentMoniker": "projectGui\\structure.h",
+              "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\structure.h",
+              "RelativeToolTip": "projectGui\\structure.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-30T14:08:41.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "shapefactory.h",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapefactory.h",
               "RelativeDocumentMoniker": "projectGui\\shapefactory.h",
@@ -90,19 +140,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "shapeinputdialog.cpp",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapeinputdialog.cpp",
               "RelativeDocumentMoniker": "projectGui\\shapeinputdialog.cpp",
               "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapeinputdialog.cpp",
               "RelativeToolTip": "projectGui\\shapeinputdialog.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-28T13:20:24.365Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "shapefactory.cpp",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapefactory.cpp",
               "RelativeDocumentMoniker": "projectGui\\shapefactory.cpp",
@@ -114,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "BezierWidget.h",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\BezierWidget.h",
               "RelativeDocumentMoniker": "projectGui\\BezierWidget.h",
@@ -126,20 +176,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "BezierWidget.cpp",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\BezierWidget.cpp",
               "RelativeDocumentMoniker": "projectGui\\BezierWidget.cpp",
               "ToolTip": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\BezierWidget.cpp",
               "RelativeToolTip": "projectGui\\BezierWidget.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-28T13:11:09.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T13:11:09.649Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "stl_shape.cpp",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\src\\stl_shape.cpp",
               "RelativeDocumentMoniker": "geometry\\src\\stl_shape.cpp",
@@ -151,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "glwidget.h",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\glwidget.h",
               "RelativeDocumentMoniker": "projectGui\\glwidget.h",
@@ -163,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "glwidget.cpp",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\glwidget.cpp",
               "RelativeDocumentMoniker": "projectGui\\glwidget.cpp",
@@ -175,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "mainwindow.cpp",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\mainwindow.cpp",
               "RelativeDocumentMoniker": "projectGui\\mainwindow.cpp",
@@ -187,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "mainwindow.h",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\mainwindow.h",
               "RelativeDocumentMoniker": "projectGui\\mainwindow.h",
@@ -199,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "CMakeLists.txt",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\CMakeLists.txt",
               "RelativeDocumentMoniker": "projectGui\\CMakeLists.txt",
@@ -211,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\main.cpp",
               "RelativeDocumentMoniker": "projectGui\\main.cpp",
@@ -223,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "shapeinputdialog.h",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\projectGui\\shapeinputdialog.h",
               "RelativeDocumentMoniker": "projectGui\\shapeinputdialog.h",
@@ -235,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "stl_shape.h",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\include\\stl_shape.h",
               "RelativeDocumentMoniker": "geometry\\include\\stl_shape.h",
@@ -247,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "obj_shape.h",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\include\\obj_shape.h",
               "RelativeDocumentMoniker": "geometry\\include\\obj_shape.h",
@@ -259,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "obj_shape.cpp",
               "DocumentMoniker": "C:\\Users\\Shivam Mishra\\Desktop\\Project\\geometry\\src\\obj_shape.cpp",
               "RelativeDocumentMoniker": "geometry\\src\\obj_shape.cpp",

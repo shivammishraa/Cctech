@@ -7,6 +7,7 @@
 #include "BezierWidget.h" // Include BezierWidget header
 #include "PolygonWidget.h" // Include PolygonWidget header
 #include "BooleanOperationWidget.h" // Include BooleanOperationWidget header
+#include "SketchWindow.h" // Include SketchWindow header
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -27,6 +28,7 @@ private slots:
     void openGLWidget();     // Slot to switch back to GLWidget
     void openPolygonWidget(); // Slot to open the PolygonWidget window
     void openBooleanOperationWidget(); // Slot to open the BooleanOperationWidget window
+    void on_openSketchWindowButton_clicked();
 
 private:
     Ui::MainWindow* ui;

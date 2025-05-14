@@ -32,6 +32,9 @@ set(SOURCES
     PolygonWidget.cpp
     Boolean/BooleanOperationWidget.cpp
     Boolean/BasicShapes2D.cpp
+    Boolean/SketchGLWidget.cpp
+    Boolean/SketchWindow.cpp
+    Boolean/polygon_boolean.cpp
     mainwindow.cpp
     shapeinputdialog.cpp
     shapefactory.cpp               
@@ -59,6 +62,9 @@ set(HEADERS
     PolygonWidget.h
     Boolean/BooleanOperationWidget.h
     Boolean/BasicShapes2D.h
+    Boolean/SketchGLWidget.h
+    Boolean/SketchWindow.h
+    Boolean/polygon_boolean.h
     mainwindow.h
     shapeinputdialog.h
     shape3d.h                      

@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\application\\src",
     "\\projectGui"
   ],
-  "SelectedNode": "\\projectGui\\shape3d.h",
+  "SelectedNode": "\\projectGui\\mainwindow.ui",
   "PreviewInSolutionExplorer": false
 }

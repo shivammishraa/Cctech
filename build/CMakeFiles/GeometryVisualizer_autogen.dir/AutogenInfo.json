@@ -456,6 +456,24 @@
 			null
 		],
 		[
+			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/Boolean/SketchGLWidget.h",
+			"MU",
+			"DEBX34UDX6/moc_SketchGLWidget.cpp",
+			null
+		],
+		[
+			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/Boolean/SketchWindow.h",
+			"MU",
+			"DEBX34UDX6/moc_SketchWindow.cpp",
+			null
+		],
+		[
+			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/Boolean/polygon_boolean.h",
+			"MU",
+			"DEBX34UDX6/moc_polygon_boolean.cpp",
+			null
+		],
+		[
 			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/PolygonWidget.h",
 			"MU",
 			"EWIEGA46WW/moc_PolygonWidget.cpp",
@@ -659,6 +677,21 @@
 		],
 		[
 			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/Boolean/BooleanOperationWidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/Boolean/SketchGLWidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/Boolean/SketchWindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Shivam Mishra/Desktop/Project/projectGui/Boolean/polygon_boolean.cpp",
 			"MU",
 			null
 		],

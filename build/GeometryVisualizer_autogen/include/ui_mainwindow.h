@@ -34,6 +34,7 @@ public:
     QComboBox *Shapes;
     QPushButton *pushButton;
     QPushButton *uploadButton;
+    QPushButton *openSketchWindowButton;
     QSpacerItem *horizontalSpacer;
     QHBoxLayout *dimensionInputsLayout;
     GLWidget *openGLWidget;
@@ -76,6 +77,11 @@ public:
 
         topBarLayout->addWidget(uploadButton);
 
+        openSketchWindowButton = new QPushButton(centralwidget);
+        openSketchWindowButton->setObjectName("openSketchWindowButton");
+
+        topBarLayout->addWidget(openSketchWindowButton);
+
         horizontalSpacer = new QSpacerItem(0, 0, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         topBarLayout->addItem(horizontalSpacer);
@@ -117,6 +123,7 @@ public:
 
         pushButton->setText(QCoreApplication::translate("MainWindow", "Plot Shape", nullptr));
         uploadButton->setText(QCoreApplication::translate("MainWindow", "Upload File", nullptr));
+        openSketchWindowButton->setText(QCoreApplication::translate("MainWindow", "2D Sketch Editor", nullptr));
     } // retranslateUi
 
 };

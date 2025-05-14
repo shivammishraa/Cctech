@@ -1,74 +1,50 @@
 # ninja log v6
-6703	10102	7688297042314412	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/stl_shape.cpp.obj	32443930bc64c147
-13527	16309	7688297110544403	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/scene.cpp.obj	b31688bbd4d52afc
-29	2780	7688297002061687	GeometryVisualizer_autogen/timestamp	6850eaa0527f4405
-11327	17326	7688297088555124	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/cylinder.cpp.obj	967eabf995b02deb
-29	2780	7688297002061687	C:/Users/Shivam Mishra/Desktop/Project/build/GeometryVisualizer_autogen/timestamp	6850eaa0527f4405
-2789	11327	7688297003159359	CMakeFiles/GeometryVisualizer.dir/glwidget.cpp.obj	d713b31bb997239b
-29	2780	7688297002061687	GeometryVisualizer_autogen/mocs_compilation.cpp	6850eaa0527f4405
-29	2780	7688297002061687	C:/Users/Shivam Mishra/Desktop/Project/build/GeometryVisualizer_autogen/mocs_compilation.cpp	6850eaa0527f4405
-10740	16463	7688297082687163	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/cuboid.cpp.obj	a4ed9d364bf2845f
-11673	14762	7688297091999269	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/line3D.cpp.obj	66708c62d4970058
-13873	18515	7688297113988500	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/sphere.cpp.obj	30b756ab0625c562
-10102	15526	7688297076305551	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/bezier.cpp.obj	ebadfce80665c993
-7068	9104	7688156069071177	GeometryVisualizer.exe	6e0c06e0657689f4
-11927	15726	7688297094526099	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/objToStl.cpp.obj	bfaddaae28a5ae1d
-2785	12464	7688297003064282	CMakeFiles/GeometryVisualizer.dir/main.cpp.obj	7b57d9637034627b
-2820	12410	7688297003481169	CMakeFiles/GeometryVisualizer.dir/shapefactory.cpp.obj	382d82bfa8d425b0
-12269	13873	7688297097972635	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/plot_utils.cpp.obj	ae5a1b50d6b8e5ef
-2816	10740	7688297003443579	CMakeFiles/GeometryVisualizer.dir/shapeinputdialog.cpp.obj	e3f0b30b08bf1f5f
-74	97	7688296969149814	clean	577b940aee94fbd7
-13627	18798	7688297111548178	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/shape_handlers.cpp.obj	853c7a36bfd93e2c
-2782	11927	7688297003064282	CMakeFiles/GeometryVisualizer.dir/GeometryVisualizer_autogen/mocs_compilation.cpp.obj	281945770074de46
-2793	11673	7688297003212779	CMakeFiles/GeometryVisualizer.dir/BezierWidget.cpp.obj	bf9ca18126d33f5e
-2812	13627	7688297003403591	CMakeFiles/GeometryVisualizer.dir/mainwindow.cpp.obj	9af99c4af8d2551b
-14762	16559	7688297122902097	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/transform_utils.cpp.obj	42ac98a4889783ba
-12411	18213	7688297099374766	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/polygon.cpp.obj	74d0d9e5512181ef
-15526	17818	7688297130516806	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/triangle.cpp.obj	682518e5a549ae7e
-12464	18259	7688297099909978	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/polyline.cpp.obj	e517e96a356c4317
-2803	12269	7688297003315125	CMakeFiles/GeometryVisualizer.dir/Boolean/BooleanOperationWidget.cpp.obj	4c13b9b85b648ac6
-12	1342	7688300791897298	build.ninja	5b4cbaad091492f9
-15726	17938	7688297132543091	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/obj_shape.cpp.obj	f2dcbf7217ef30fc
-38	74	7688296968708716	CMakeFiles/clean.additional	8397e2cd25e26b36
-2798	13526	7688297003259625	CMakeFiles/GeometryVisualizer.dir/PolygonWidget.cpp.obj	213908b6a4a9eb73
-2808	6703	7688297003315125	CMakeFiles/GeometryVisualizer.dir/Boolean/BasicShapes2D.cpp.obj	f4082e3b344e49f4
-48	121	7688300799953729	CMakeFiles/clean.additional	8397e2cd25e26b36
-121	141	7688300800789485	clean	577b940aee94fbd7
-29	2874	7688300843995779	GeometryVisualizer_autogen/timestamp	6850eaa0527f4405
-29	2874	7688300843995779	GeometryVisualizer_autogen/mocs_compilation.cpp	6850eaa0527f4405
-29	2874	7688300843995779	C:/Users/Shivam Mishra/Desktop/Project/build/GeometryVisualizer_autogen/timestamp	6850eaa0527f4405
-29	2874	7688300843995779	C:/Users/Shivam Mishra/Desktop/Project/build/GeometryVisualizer_autogen/mocs_compilation.cpp	6850eaa0527f4405
-2899	7202	7688300845494775	CMakeFiles/GeometryVisualizer.dir/Boolean/BasicShapes2D.cpp.obj	f4082e3b344e49f4
-7202	10510	7688300888523388	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/stl_shape.cpp.obj	32443930bc64c147
-2907	11750	7688300845564776	CMakeFiles/GeometryVisualizer.dir/shapeinputdialog.cpp.obj	e3f0b30b08bf1f5f
-2884	11910	7688300845254556	CMakeFiles/GeometryVisualizer.dir/glwidget.cpp.obj	d713b31bb997239b
-2896	12539	7688300845454792	CMakeFiles/GeometryVisualizer.dir/Boolean/BooleanOperationWidget.cpp.obj	4c13b9b85b648ac6
-2881	12710	7688300845254556	CMakeFiles/GeometryVisualizer.dir/main.cpp.obj	7b57d9637034627b
-2888	12766	7688300845254556	CMakeFiles/GeometryVisualizer.dir/BezierWidget.cpp.obj	bf9ca18126d33f5e
-2877	12920	7688300845254556	CMakeFiles/GeometryVisualizer.dir/GeometryVisualizer_autogen/mocs_compilation.cpp.obj	281945770074de46
-2910	13295	7688300845574732	CMakeFiles/GeometryVisualizer.dir/shapefactory.cpp.obj	382d82bfa8d425b0
-2903	13769	7688300845534792	CMakeFiles/GeometryVisualizer.dir/mainwindow.cpp.obj	9af99c4af8d2551b
-2892	13944	7688300845394691	CMakeFiles/GeometryVisualizer.dir/PolygonWidget.cpp.obj	213908b6a4a9eb73
-12539	14891	7688300941898186	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/line3D.cpp.obj	66708c62d4970058
-12766	14997	7688300944125359	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/plot_utils.cpp.obj	ae5a1b50d6b8e5ef
-10510	16028	7688300921550561	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/bezier.cpp.obj	ebadfce80665c993
-12710	16414	7688300943610508	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/objToStl.cpp.obj	bfaddaae28a5ae1d
-14997	16522	7688300966477085	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/transform_utils.cpp.obj	42ac98a4889783ba
-13769	16570	7688300954146978	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/scene.cpp.obj	b31688bbd4d52afc
-11751	17333	7688300933987791	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/cuboid.cpp.obj	a4ed9d364bf2845f
-11910	17404	7688300935608708	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/cylinder.cpp.obj	967eabf995b02deb
-16029	18265	7688300976772818	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/triangle.cpp.obj	682518e5a549ae7e
-16415	18477	7688300980606157	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/obj_shape.cpp.obj	f2dcbf7217ef30fc
-12920	18722	7688300945654417	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/polygon.cpp.obj	74d0d9e5512181ef
-13295	19077	7688300949454588	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/polyline.cpp.obj	e517e96a356c4317
-14891	19543	7688300965398517	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/sphere.cpp.obj	30b756ab0625c562
-13944	19584	7688300955894901	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/shape_handlers.cpp.obj	853c7a36bfd93e2c
-19584	21527	7688301012310231	GeometryVisualizer.exe	6e0c06e0657689f4
-58	328	7688304689383122	GeometryVisualizer_autogen/timestamp	6850eaa0527f4405
-58	328	7688304689383122	GeometryVisualizer_autogen/mocs_compilation.cpp	6850eaa0527f4405
-58	328	7688304689383122	C:/Users/Shivam Mishra/Desktop/Project/build/GeometryVisualizer_autogen/timestamp	6850eaa0527f4405
-58	328	7688304689383122	C:/Users/Shivam Mishra/Desktop/Project/build/GeometryVisualizer_autogen/mocs_compilation.cpp	6850eaa0527f4405
-338	7586	7688304692182963	CMakeFiles/GeometryVisualizer.dir/shapefactory.cpp.obj	382d82bfa8d425b0
-330	7645	7688304692095672	CMakeFiles/GeometryVisualizer.dir/Boolean/BooleanOperationWidget.cpp.obj	4c13b9b85b648ac6
-335	8522	7688304692152966	CMakeFiles/GeometryVisualizer.dir/mainwindow.cpp.obj	9af99c4af8d2551b
-8522	10955	7688304773976239	GeometryVisualizer.exe	6e0c06e0657689f4
+3212	16190	7689310819282187	CMakeFiles/GeometryVisualizer.dir/Boolean/SketchGLWidget.cpp.obj	aecc27d5213448a3
+11809	15448	7689310905248522	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/stl_shape.cpp.obj	32443930bc64c147
+16749	19436	7689310954652772	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/scene.cpp.obj	b31688bbd4d52afc
+32	3182	7689310817734399	GeometryVisualizer_autogen/timestamp	6850eaa0527f4405
+12592	18440	7689310913085295	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/cylinder.cpp.obj	967eabf995b02deb
+32	3182	7689310817734399	C:/Users/Shivam Mishra/Desktop/Project/build/GeometryVisualizer_autogen/timestamp	6850eaa0527f4405
+3192	12220	7689310819082190	CMakeFiles/GeometryVisualizer.dir/glwidget.cpp.obj	d713b31bb997239b
+32	3182	7689310817734399	GeometryVisualizer_autogen/mocs_compilation.cpp	6850eaa0527f4405
+32	3182	7689310817734399	C:/Users/Shivam Mishra/Desktop/Project/build/GeometryVisualizer_autogen/mocs_compilation.cpp	6850eaa0527f4405
+12587	18341	7689310913035314	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/cuboid.cpp.obj	a4ed9d364bf2845f
+12697	15673	7689310914133385	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/line3D.cpp.obj	66708c62d4970058
+18101	22231	7689310968179866	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/sphere.cpp.obj	30b756ab0625c562
+12220	18711	7689310909363704	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/bezier.cpp.obj	ebadfce80665c993
+22465	24870	7689311011807728	GeometryVisualizer.exe	b832290a7f211e20
+3216	12697	7689310819322186	CMakeFiles/GeometryVisualizer.dir/Boolean/SketchWindow.cpp.obj	1a456a6a8abb1c9e
+13482	17385	7689310921987733	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/objToStl.cpp.obj	bfaddaae28a5ae1d
+3188	11808	7689310819042190	CMakeFiles/GeometryVisualizer.dir/main.cpp.obj	7b57d9637034627b
+10395	19907	7689310891109904	CMakeFiles/GeometryVisualizer.dir/shapefactory.cpp.obj	382d82bfa8d425b0
+15448	18101	7689310941649344	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/plot_utils.cpp.obj	ae5a1b50d6b8e5ef
+8269	16749	7689310869852615	CMakeFiles/GeometryVisualizer.dir/shapeinputdialog.cpp.obj	e3f0b30b08bf1f5f
+51	79	7689310781459923	clean	577b940aee94fbd7
+17385	22464	7689310961020347	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/shape_handlers.cpp.obj	853c7a36bfd93e2c
+3184	12587	7689310819002175	CMakeFiles/GeometryVisualizer.dir/GeometryVisualizer_autogen/mocs_compilation.cpp.obj	281945770074de46
+3196	10394	7689310819122179	CMakeFiles/GeometryVisualizer.dir/BezierWidget.cpp.obj	bf9ca18126d33f5e
+7050	18643	7689310857657405	CMakeFiles/GeometryVisualizer.dir/mainwindow.cpp.obj	9af99c4af8d2551b
+18341	19651	7689310970571570	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/transform_utils.cpp.obj	42ac98a4889783ba
+15673	21104	7689310943895122	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/polygon.cpp.obj	74d0d9e5512181ef
+18440	20788	7689310971566763	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/triangle.cpp.obj	682518e5a549ae7e
+16191	22346	7689310949075768	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/polyline.cpp.obj	e517e96a356c4317
+3204	13482	7689310819212183	CMakeFiles/GeometryVisualizer.dir/Boolean/BooleanOperationWidget.cpp.obj	4c13b9b85b648ac6
+12	1342	7689290074080681	build.ninja	5b4cbaad091492f9
+18643	20762	7689310973599419	CMakeFiles/GeometryVisualizer.dir/C_/Users/Shivam_Mishra/Desktop/Project/geometry/src/obj_shape.cpp.obj	f2dcbf7217ef30fc
+13	51	7689310781076044	CMakeFiles/clean.additional	8397e2cd25e26b36
+3200	12592	7689310819162186	CMakeFiles/GeometryVisualizer.dir/PolygonWidget.cpp.obj	213908b6a4a9eb73
+3220	8269	7689310819372194	CMakeFiles/GeometryVisualizer.dir/Boolean/polygon_boolean.cpp.obj	50c607b81a1133af
+3208	7049	7689310819242169	CMakeFiles/GeometryVisualizer.dir/Boolean/BasicShapes2D.cpp.obj	f4082e3b344e49f4
+24	1483	7689311759043526	GeometryVisualizer_autogen/timestamp	6850eaa0527f4405
+24	1483	7689311759043526	GeometryVisualizer_autogen/mocs_compilation.cpp	6850eaa0527f4405
+24	1483	7689311759043526	C:/Users/Shivam Mishra/Desktop/Project/build/GeometryVisualizer_autogen/timestamp	6850eaa0527f4405
+24	1483	7689311759043526	C:/Users/Shivam Mishra/Desktop/Project/build/GeometryVisualizer_autogen/mocs_compilation.cpp	6850eaa0527f4405
+1504	5972	7689311760483528	CMakeFiles/GeometryVisualizer.dir/Boolean/polygon_boolean.cpp.obj	50c607b81a1133af
+1488	8260	7689311760333513	CMakeFiles/GeometryVisualizer.dir/main.cpp.obj	7b57d9637034627b
+1500	8294	7689311760443662	CMakeFiles/GeometryVisualizer.dir/Boolean/SketchWindow.cpp.obj	1a456a6a8abb1c9e
+1485	8526	7689311760293520	CMakeFiles/GeometryVisualizer.dir/GeometryVisualizer_autogen/mocs_compilation.cpp.obj	281945770074de46
+1511	8648	7689311760563530	CMakeFiles/GeometryVisualizer.dir/shapefactory.cpp.obj	382d82bfa8d425b0
+1492	8979	7689311760363513	CMakeFiles/GeometryVisualizer.dir/Boolean/BooleanOperationWidget.cpp.obj	4c13b9b85b648ac6
+1508	9666	7689311760523526	CMakeFiles/GeometryVisualizer.dir/mainwindow.cpp.obj	9af99c4af8d2551b
+1496	10435	7689311760413521	CMakeFiles/GeometryVisualizer.dir/Boolean/SketchGLWidget.cpp.obj	aecc27d5213448a3
+10435	12867	7689311849798356	GeometryVisualizer.exe	b832290a7f211e20

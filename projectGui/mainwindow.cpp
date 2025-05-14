@@ -10,7 +10,7 @@
 #include "bezierwidget.h"
 #include "PolygonWidget.h"
 #include "Boolean/BooleanOperationWidget.h"
-
+#include "sketchwindow.h"
 #include <memory>
 #include <QMessageBox>
 #include <QFileDialog>
@@ -219,4 +219,9 @@ void MainWindow::openBooleanOperationWidget()
     auto* booleanWidget = new BooleanOperationWidget();
     booleanWidget->setAttribute(Qt::WA_DeleteOnClose);
     booleanWidget->show();
+}
+
+void MainWindow::on_openSketchWindowButton_clicked() {
+    SketchWindow* window = new SketchWindow(this);
+    window->show();
 }
