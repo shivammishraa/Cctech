@@ -9,34 +9,38 @@
 
 using namespace std;
 
-Sphere::Sphere(double r, int seg) : radius(r), segments(seg) {
+Sphere::Sphere(double r, int seg) : radius(r), segments(seg)
+{
     cout << "Generating sphere vertices..." << endl;
 
-    for (int i = 0; i <= segments; i++) {
+    for (int i = 0; i <= segments; i++)
+    {
         double theta = M_PI * i / segments;
-        for (int j = 0; j <= segments; j++) {
+        for (int j = 0; j <= segments; j++)
+        {
             double phi = 2 * M_PI * j / segments;
             double x = radius * sin(theta) * cos(phi);
             double y = radius * sin(theta) * sin(phi);
             double z = radius * cos(theta);
 
-            if (isnan(x) || isnan(y) || isnan(z)) {
+            if (isnan(x) || isnan(y) || isnan(z))
+            {
                 cerr << "Error: Invalid vertex generated for sphere.\n";
                 return;
             }
 
-            vertices.push_back({ x, y, z });
+            vertices.push_back({x, y, z});
         }
     }
 
     cout << "Generated " << vertices.size() << " vertices for the sphere." << endl;
 }
 
-
-
-void Sphere::plot(const string& filename) const {
+void Sphere::plot(const string &filename) const
+{
     ofstream file(filename);
-    for (const auto& v : vertices) {
+    for (const auto &v : vertices)
+    {
         file << v[0] << " " << v[1] << " " << v[2] << "\n";
     }
     file.close();
@@ -44,9 +48,11 @@ void Sphere::plot(const string& filename) const {
     plotWithGnuplot(filename, "blue", 2);
 }
 
-void Sphere::saveToFile(const string& filename) const {
+void Sphere::saveToFile(const string &filename) const
+{
     ofstream file(filename, ios::app);
-    if (!file) {
+    if (!file)
+    {
         cerr << "Error: Cannot open file for writing.\n";
         return;
     }
@@ -54,8 +60,10 @@ void Sphere::saveToFile(const string& filename) const {
     int numLatitudes = segments + 1;
     int numLongitudes = segments + 1;
 
-    for (int i = 0; i < numLatitudes; i++) {
-        for (int j = 0; j < numLongitudes; j++) {
+    for (int i = 0; i < numLatitudes; i++)
+    {
+        for (int j = 0; j < numLongitudes; j++)
+        {
             int index = i * numLongitudes + j;
             file << vertices[index][0] << " " << vertices[index][1] << " " << vertices[index][2] << "\n";
         }
@@ -65,40 +73,48 @@ void Sphere::saveToFile(const string& filename) const {
     file.close();
 }
 
-void Sphere::translate(double dx, double dy, double dz) {
+void Sphere::translate(double dx, double dy, double dz)
+{
     translateVertices(vertices, dx, dy, dz);
 }
 
-void Sphere::scale(double factor) {
+void Sphere::scale(double factor)
+{
     scaleVertices(vertices, factor);
 }
 
-void Sphere::rotate(double angle, char axis) {
+void Sphere::rotate(double angle, char axis)
+{
     rotateVertices(vertices, angle, axis);
 }
 
- std::vector<std::pair<std::vector<double>, std::vector<double>>> Sphere::getEdges() const {
-     std::vector<std::pair<std::vector<double>, std::vector<double>>> edges;
-     int numLatitudes = segments + 1;
-     int numLongitudes = segments + 1;
+std::vector<std::pair<std::vector<double>, std::vector<double>>> Sphere::getEdges() const
+{
+    std::vector<std::pair<std::vector<double>, std::vector<double>>> edges;
+    int numLatitudes = segments + 1;
+    int numLongitudes = segments + 1;
 
-     for (int i = 0; i < numLatitudes; ++i) {
-         for (int j = 0; j < numLongitudes; ++j) {
-             int index = i * numLongitudes + j;
+    for (int i = 0; i < numLatitudes; ++i)
+    {
+        for (int j = 0; j < numLongitudes; ++j)
+        {
+            int index = i * numLongitudes + j;
 
-             // Connect to next longitude (wrap-around)
-             if (j < numLongitudes - 1) {
-                 int nextLong = index + 1;
-                 edges.push_back({ vertices[index], vertices[nextLong] });
-             }
+            // Connect to next longitude (wrap-around)
+            if (j < numLongitudes - 1)
+            {
+                int nextLong = index + 1;
+                edges.push_back({vertices[index], vertices[nextLong]});
+            }
 
-             // Connect to next latitude
-             if (i < numLatitudes - 1) {
-                 int nextLat = index + numLongitudes;
-                 edges.push_back({ vertices[index], vertices[nextLat] });
-             }
-         }
-     }
+            // Connect to next latitude
+            if (i < numLatitudes - 1)
+            {
+                int nextLat = index + numLongitudes;
+                edges.push_back({vertices[index], vertices[nextLat]});
+            }
+        }
+    }
 
-     return edges;
- }
+    return edges;
+}

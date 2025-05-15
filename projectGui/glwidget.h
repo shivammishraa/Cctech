@@ -18,21 +18,21 @@ class GLWidget : public QOpenGLWidget, protected QOpenGLFunctions
     Q_OBJECT
 
 public:
-    explicit GLWidget(QWidget* parent = nullptr);
-    void setShapeVertices(const std::vector<std::pair<std::vector<double>, std::vector<double>>>& edges);
-    void addTrianglesToEdges(const std::vector<std::vector<std::vector<double>>>& triangles);
+    explicit GLWidget(QWidget *parent = nullptr);
+    void setShapeVertices(const std::vector<std::pair<std::vector<double>, std::vector<double>>> &edges);
+    void addTrianglesToEdges(const std::vector<std::vector<std::vector<double>>> &triangles);
 
 protected:
     void initializeGL() override;
     void resizeGL(int w, int h) override;
     void paintGL() override;
 
-    void wheelEvent(QWheelEvent* event) override;
-    void mousePressEvent(QMouseEvent* event) override;
-    void mouseMoveEvent(QMouseEvent* event) override;
+    void wheelEvent(QWheelEvent *event) override;
+    void mousePressEvent(QMouseEvent *event) override;
+    void mouseMoveEvent(QMouseEvent *event) override;
 
 private:
-bool initialized = false;
+    bool initialized = false;
     std::vector<std::pair<QVector3D, QVector3D>> shapeEdges;
     QMatrix4x4 projection;
     QOpenGLShaderProgram shaderProgram;
@@ -46,16 +46,16 @@ bool initialized = false;
     float rotationX = 0.0f; // optional: for rotating using mouse
     float rotationY = 0.0f;
 
-    QOpenGLBuffer vertexBuffer; // VBO for vertices
-    QOpenGLBuffer indexBuffer;  // VBO for indices
+    QOpenGLBuffer vertexBuffer;   // VBO for vertices
+    QOpenGLBuffer indexBuffer;    // VBO for indices
     QOpenGLVertexArrayObject vao; // VAO for managing VBOs
 
-    std::vector<QVector3D> vertices; // Vertex data
+    std::vector<QVector3D> vertices;   // Vertex data
     std::vector<unsigned int> indices; // Index data
 
     bool buffersInitialized = false; // Track if buffers are initialized
-    void initializeBuffers(); // Initialize VBOs and VAO
-    void updateBuffers(); // Update VBOs with new data
+    void initializeBuffers();        // Initialize VBOs and VAO
+    void updateBuffers();            // Update VBOs with new data
 
     void checkOpenGLError();
 };

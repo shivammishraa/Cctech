@@ -11,6 +11,6 @@ void handleBezier();
 void handleLine3D();
 void handlePolyline();
 void handleScene();
-void handleTriangularShapes(const std::string& filename);
-void handleOBJtoSTL(const std::string& filename); // New function to handle OBJ conversion
+void handleTriangularShapes(const std::string &filename);
+void handleOBJtoSTL(const std::string &filename); // New function to handle OBJ conversion
 #endif

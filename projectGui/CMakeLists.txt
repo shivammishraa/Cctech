@@ -19,7 +19,7 @@ find_package(OpenGL REQUIRED)
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/../geometry/include
     ${CMAKE_CURRENT_SOURCE_DIR}/../application/src
-    ${CMAKE_CURRENT_SOURCE_DIR}/projectGui      
+    ${CMAKE_CURRENT_SOURCE_DIR}/projectGui
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}/Boolean
 )
@@ -37,7 +37,7 @@ set(SOURCES
     Boolean/polygon_boolean.cpp
     mainwindow.cpp
     shapeinputdialog.cpp
-    shapefactory.cpp               
+    shapefactory.cpp
     ../geometry/src/stl_shape.cpp
     ../geometry/src/bezier.cpp
     ../geometry/src/cuboid.cpp
@@ -51,8 +51,8 @@ set(SOURCES
     ../geometry/src/shape_handlers.cpp
     ../geometry/src/sphere.cpp
     ../geometry/src/transform_utils.cpp
-    ../geometry/src/triangle.cpp 
-    ../geometry/src/obj_shape.cpp 
+    ../geometry/src/triangle.cpp
+    ../geometry/src/obj_shape.cpp
 )
 
 # Header files
@@ -67,8 +67,8 @@ set(HEADERS
     Boolean/polygon_boolean.h
     mainwindow.h
     shapeinputdialog.h
-    shape3d.h                      
-    shapefactory.h                 
+    shape3d.h
+    shapefactory.h
     ../geometry/include/stl_shape.h
     ../geometry/include/bezier.h
     ../geometry/include/cuboid.h
@@ -104,5 +104,4 @@ target_link_libraries(${PROJECT_NAME}
     Qt6::OpenGL
     Qt6::OpenGLWidgets
     OpenGL::GL
-    
 )

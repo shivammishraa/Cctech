@@ -7,6 +7,6 @@
 #include "ui_mainwindow.h"
 #include <QWidget>
 
-std::shared_ptr<Shape3D> createShapeFromDialog(const QString& shapeName, QWidget* parent);
+std::shared_ptr<Shape3D> createShapeFromDialog(const QString &shapeName, QWidget *parent);
 
 #endif // SHAPEFACTORY_H

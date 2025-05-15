@@ -5,11 +5,12 @@
 
 class SketchGLWidget;
 
-class SketchWindow : public QMainWindow {
+class SketchWindow : public QMainWindow
+{
     Q_OBJECT
 
 public:
-    explicit SketchWindow(QWidget* parent = nullptr);
+    explicit SketchWindow(QWidget *parent = nullptr);
 
 private slots:
     void handleFinishShape();
@@ -18,7 +19,7 @@ private slots:
     void handleSubtraction();
 
 private:
-    SketchGLWidget* glWidget;
+    SketchGLWidget *glWidget;
 };
 
 #endif // SKETCHWINDOW_H

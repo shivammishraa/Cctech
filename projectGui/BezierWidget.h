@@ -8,7 +8,8 @@
 #include <QMatrix4x4>
 #include <QMouseEvent>
 
-class BezierWidget : public QOpenGLWidget, protected QOpenGLFunctions {
+class BezierWidget : public QOpenGLWidget, protected QOpenGLFunctions
+{
     Q_OBJECT
 
 public:

@@ -6,7 +6,8 @@
 
 using namespace std;
 
-void menu() {
+void menu()
+{
     cout << "Select an option:\n";
     cout << "1. Plot Shapes\n";
     cout << "2. Plot STL File\n";
@@ -14,7 +15,8 @@ void menu() {
     cout << "Enter choice: ";
 }
 
-void shapeMenu() {
+void shapeMenu()
+{
     cout << "Select a shape to plot:\n";
     cout << "1. Cuboid\n";
     cout << "2. Sphere\n";
@@ -28,19 +30,21 @@ void shapeMenu() {
     cout << "Enter choice: ";
 }
 
-void handleSTLFile() {
+void handleSTLFile()
+{
     string filename;
     cout << "Enter STL file name (from assets/): ";
     cin >> filename;
     handleTriangularShapes("assets/" + filename);
 }
 
-void handleOBJToSTLConversion() {
+void handleOBJToSTLConversion()
+{
     string objFilename, stlFilename;
-    
+
     cout << "Enter OBJ file name (from assets/): ";
     cin >> objFilename;
-    
+
     cout << "Enter STL output file name (to be saved in assets/): ";
     cin >> stlFilename;
 
@@ -51,7 +55,8 @@ void handleOBJToSTLConversion() {
     converter.convertAndPlot(objPath, stlPath);
 }
 
-int main() {
+int main()
+{
     map<int, function<void()>> shapeHandlers = {
         {1, handleCuboid},
         {2, handleSphere},
@@ -61,28 +66,37 @@ int main() {
         {6, handlePolyline},
         {7, handleLine3D},
         {8, handleBezier},
-        {9, handleScene}
-    };
+        {9, handleScene}};
 
     menu();
     int mainChoice;
     cin >> mainChoice;
 
-    if (mainChoice == 1) {
+    if (mainChoice == 1)
+    {
         shapeMenu();
         int shapeChoice;
         cin >> shapeChoice;
 
-        if (shapeHandlers.find(shapeChoice) != shapeHandlers.end()) {
+        if (shapeHandlers.find(shapeChoice) != shapeHandlers.end())
+        {
             shapeHandlers[shapeChoice]();
-        } else {
+        }
+        else
+        {
             cout << "Invalid choice!\n";
         }
-    } else if (mainChoice == 2) {
+    }
+    else if (mainChoice == 2)
+    {
         handleSTLFile();
-    } else if (mainChoice == 3) {
+    }
+    else if (mainChoice == 3)
+    {
         handleOBJToSTLConversion();
-    } else {
+    }
+    else
+    {
         cout << "Invalid choice!\n";
     }
 

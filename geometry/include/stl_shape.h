@@ -12,9 +12,9 @@ private:
     vector<vector<vector<double>>> triangles; // Using vector instead of array
 
 public:
-    STLShape(const std::string& filepath);
-    void saveToFile(const std::string& filename) const;
-    void plot(const std::string& filename) const;
+    STLShape(const std::string &filepath);
+    void saveToFile(const std::string &filename) const;
+    void plot(const std::string &filename) const;
 
     // Returns the parsed triangles
     vector<vector<vector<double>>> getTriangles() const;

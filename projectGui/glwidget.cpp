@@ -14,16 +14,15 @@
 #include <stl_shape.h>
 #include <obj_shape.h>
 
-
-inline uint qHash(const QVector3D& key, uint seed = 0) noexcept
+inline uint qHash(const QVector3D &key, uint seed = 0) noexcept
 {
     return qHash(qRound(key.x() * 1000) ^ qRound(key.y() * 1000) ^ qRound(key.z() * 1000), seed);
 }
 
-GLWidget::GLWidget(QWidget* parent)
+GLWidget::GLWidget(QWidget *parent)
     : QOpenGLWidget(parent), initialized(false), zoomFactor(1.0f),
-    sceneX(0.0f), sceneY(0.0f), sensitivity(0.01f),
-    vertexBuffer(QOpenGLBuffer::VertexBuffer), indexBuffer(QOpenGLBuffer::IndexBuffer)
+      sceneX(0.0f), sceneY(0.0f), sensitivity(0.01f),
+      vertexBuffer(QOpenGLBuffer::VertexBuffer), indexBuffer(QOpenGLBuffer::IndexBuffer)
 {
     qDebug() << "GLWidget constructed";
 }
@@ -47,10 +46,8 @@ void GLWidget::initializeGL()
     // glLightfv(GL_LIGHT0, GL_SPECULAR, lightSpecular);
     // glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
 
-
-
     // GLfloat matSpecular[] = { 1.0f, 1.0f, 1.0f, 1.0f };
-    GLfloat matShininess[] = { 50.0f };
+    GLfloat matShininess[] = {50.0f};
     // glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, lightDiffuse);
     glMaterialfv(GL_FRONT, GL_SHININESS, matShininess);
 
@@ -89,7 +86,8 @@ void GLWidget::paintGL()
     glMatrixMode(GL_MODELVIEW);
     glLoadMatrixf(modelview.constData());
 
-    if (buffersInitialized) {
+    if (buffersInitialized)
+    {
         vao.bind();
         glDrawElements(GL_LINES, indices.size(), GL_UNSIGNED_INT, nullptr);
         vao.release();
@@ -98,7 +96,7 @@ void GLWidget::paintGL()
     qDebug() << "Rendering edges count:" << shapeEdges.size();
 }
 
-void GLWidget::setShapeVertices(const std::vector<std::pair<std::vector<double>, std::vector<double>>>& edges)
+void GLWidget::setShapeVertices(const std::vector<std::pair<std::vector<double>, std::vector<double>>> &edges)
 {
     vertices.clear();
     indices.clear();
@@ -108,18 +106,22 @@ void GLWidget::setShapeVertices(const std::vector<std::pair<std::vector<double>,
     QVector3D total(0.0f, 0.0f, 0.0f);
     int count = 0;
 
-    for (const auto& edge : edges) {
-        if (edge.first.size() == 3 && edge.second.size() == 3) {
+    for (const auto &edge : edges)
+    {
+        if (edge.first.size() == 3 && edge.second.size() == 3)
+        {
             QVector3D start(edge.first[0], edge.first[1], edge.first[2]);
             QVector3D end(edge.second[0], edge.second[1], edge.second[2]);
 
-            if (vertexMap.find(start) == vertexMap.end()) {
+            if (vertexMap.find(start) == vertexMap.end())
+            {
                 vertexMap[start] = index++;
                 vertices.push_back(start);
                 total += start;
                 count++;
             }
-            if (vertexMap.find(end) == vertexMap.end()) {
+            if (vertexMap.find(end) == vertexMap.end())
+            {
                 vertexMap[end] = index++;
                 vertices.push_back(end);
                 total += end;
@@ -140,20 +142,23 @@ void GLWidget::setShapeVertices(const std::vector<std::pair<std::vector<double>,
     update();
 }
 
-void GLWidget::addTrianglesToEdges(const std::vector<std::vector<std::vector<double>>>& triangles)
+void GLWidget::addTrianglesToEdges(const std::vector<std::vector<std::vector<double>>> &triangles)
 {
     vertices.clear();
     indices.clear();
     QHash<QVector3D, unsigned int> vertexMap;
     unsigned int index = 0;
 
-    for (const auto& triangle : triangles) {
+    for (const auto &triangle : triangles)
+    {
         QVector3D v1((triangle[0][0]) / 10, triangle[0][1] / 10, triangle[0][2] / 10);
         QVector3D v2(triangle[1][0] / 10, triangle[1][1] / 10, triangle[1][2] / 10);
         QVector3D v3(triangle[2][0] / 10, triangle[2][1] / 10, triangle[2][2] / 10);
 
-        for (const auto& vertex : { v1, v2, v3 }) {
-            if (vertexMap.find(vertex) == vertexMap.end()) {
+        for (const auto &vertex : {v1, v2, v3})
+        {
+            if (vertexMap.find(vertex) == vertexMap.end())
+            {
                 vertexMap[vertex] = index++;
                 vertices.push_back(vertex);
             }
@@ -193,7 +198,8 @@ void GLWidget::initializeBuffers()
 
 void GLWidget::updateBuffers()
 {
-    if (!buffersInitialized) initializeBuffers();
+    if (!buffersInitialized)
+        initializeBuffers();
 
     vertexBuffer.bind();
     vertexBuffer.allocate(vertices.data(), vertices.size() * sizeof(QVector3D));
@@ -205,32 +211,35 @@ void GLWidget::updateBuffers()
 void GLWidget::checkOpenGLError()
 {
     GLenum err = glGetError();
-    if (err != GL_NO_ERROR) {
+    if (err != GL_NO_ERROR)
+    {
         qDebug() << "OpenGL error:" << err;
     }
 }
 
-void GLWidget::wheelEvent(QWheelEvent* event)
+void GLWidget::wheelEvent(QWheelEvent *event)
 {
     int delta = event->angleDelta().y();
     zoomFactor *= (delta > 0) ? 0.9f : 1.1f;
     update();
 }
 
-void GLWidget::mousePressEvent(QMouseEvent* event)
+void GLWidget::mousePressEvent(QMouseEvent *event)
 {
     lastMousePos = event->pos();
 }
 
-void GLWidget::mouseMoveEvent(QMouseEvent* event)
+void GLWidget::mouseMoveEvent(QMouseEvent *event)
 {
     QPoint delta = event->pos() - lastMousePos;
 
-    if (event->buttons() & Qt::LeftButton) {
+    if (event->buttons() & Qt::LeftButton)
+    {
         sceneX += delta.x() * sensitivity;
         sceneY -= delta.y() * sensitivity;
     }
-    else if (event->buttons() & Qt::RightButton) {
+    else if (event->buttons() & Qt::RightButton)
+    {
         rotationX += delta.y();
         rotationY += delta.x();
     }

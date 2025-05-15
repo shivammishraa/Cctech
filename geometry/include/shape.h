@@ -5,13 +5,14 @@
 
 using namespace std;
 
-class Shape {
+class Shape
+{
 public:
     virtual ~Shape() = default;
 
     // Pure virtual methods to be implemented by derived classes
-    virtual void plot(const string& filename) const = 0;
-    virtual void saveToFile(const string& filename) const = 0;
+    virtual void plot(const string &filename) const = 0;
+    virtual void saveToFile(const string &filename) const = 0;
 
     // New pure virtual method for translation
     virtual void translate(double dx, double dy, double dz) = 0;

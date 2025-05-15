@@ -11,7 +11,7 @@ class ObjToStlConverter
 public:
     // Calls convert() and loads STLShape for future plotting
     void convertAndPlot(const std::string &objFilename, const std::string &stlFilename);
-    
+
     // Reads OBJ, deduplicates vertices, and writes STL
     static bool convert(const std::string &objFilename, const std::string &stlFilename);
 
@@ -28,4 +28,3 @@ private:
 };
 
 #endif // OBJ_TO_STL_CONVERTER_H
-

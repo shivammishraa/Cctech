@@ -11,7 +11,7 @@ private:
     std::vector<std::vector<int>> faces;
 
 public:
-    OBJShape(const std::string& filepath);
+    OBJShape(const std::string &filepath);
     std::vector<std::vector<std::vector<double>>> getTriangles() const;
 };
 
